@@ -1,0 +1,176 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://niindo.com/wp-content/uploads/2018/01/Ingin-Menikmati-Keindahan-Bunga-Sakura-Saat-Berlibur-Ke-Jepang-Simak-Perkiraan-Tanggalnya.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+    .back-button {
+    display: block; 
+    text-decoration: none;/* Menghilangkan garis bawah link */
+    color: #666;
+    background-color: #00ff37;  
+    padding: 8px 16px; /* Jarak untuk tombol */
+    border-radius: 4px; 
+    margin-bottom: 20px; /* Jarak bawah tombol */
+    display: flex;
+    align-items: center; /* Posisi vertikal tengah */
+    transition: all 0.3s ease;
+    border: 1px solid #ddd; /* Garis tepi tombol */
+    width: fit-content; /* Lebar sesuai konten */
+}
+
+.back-button:hover {
+    background-color: #00b300;
+}
+
+.back-button::before {
+    content: '←';
+    margin-right: 8px;  /* Jarak kanan panah */
+    font-size: 16px;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);  
+    padding: 40px; /* Jarak dalam container */
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px); /* Efek blur background */
+}
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px; /* Jarak bawah */
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px; /* Jarak bawah */
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: inline-flex;  /* Tampilan flex inline */
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px; /* Jarak bawah */
+        }
+
+        .login-header h1 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd; /* Garis tepi */
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Efek fokus input */
+        .form-group input:focus {
+            border-color: #2980b9;
+            outline: none; /* Menghilangkan outline */
+        }
+
+        /* Mengatur label input */
+        .form-group label {
+            position: absolute; /* Posisi absolut */
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%); /* Transformasi posisi */
+            color: #666;
+            transition: all 0.3s ease;
+            pointer-events: none; /* Menonaktifkan interaksi mouse */
+            font-size: 16px;
+        }
+
+        /* Efek floating label */
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
+            top: 0;
+            font-size: 12px;
+            background: white;
+            padding: 0 5px;
+        }
+
+        .login-button {
+            background: #00ff37;
+            color: white;
+            padding: 15px;
+            border: none;/* Tanpa border */
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .login-button:hover {
+            background:  #00b300;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .forgot-password a {
+            color: #00ff37;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pengaturan responsive untuk layar kecil */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px; /* mengkurangi padding */
+        margin: 20px; /* menambah margin */
+    }
+    
+    .login-header h1 {
+        font-size: 1.5em;      /* Ukuran font lebih kecil */
+    }
+
+    .logo {
+        width: 100px;          /* Lebar lebih kecil */
+        height: 100px;         /* Tinggi lebih kecil */
+    }
+}
+
+        
