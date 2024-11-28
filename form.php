@@ -264,7 +264,7 @@
     </div>
     <div class="form-group">
       <label for="alamat_ktp">Alamat KTP</label>
-      <input type="varchar" id="alamat_ktp" name="kirim_alamat_ktp">
+      <input type="text" id="alamat_ktp" name="kirim_alamat_ktp">
     </div>
     <div class="form-group">
       <label for="email">Alamat Email:</label>

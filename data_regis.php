@@ -42,6 +42,36 @@
         table tr:hover {
             background-color: #ddd;
         }
+
+        .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #1976D2;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f;
+}
+
     </style>
 </head>
 <body>
@@ -74,6 +104,9 @@
                     <th>Usia</th>
                     <th>Jenis Kelamin</th>
                     <th>Agama</th>
+                    <th>Alamat KTP</th>
+                    <th>Alamat Email</th>
+                    <th>No Telepon/Whatsapp</th>
                     <th>Update</th>
                     <th>Hapus</th>
                 </tr>
@@ -93,8 +126,11 @@
                     echo '<td>' .$row['usia'] . '</td>';
                     echo '<td>' .$row['Jenis_Kelamin'] . '</td>';
                     echo '<td>' .$row['Agama'] . '</td>';
-                    echo '<td><a href="update.php?id_regis=' . $row['id_regis'] . '">Update</a></td>';
-                    echo '<td><a href="hapus.php?id_regis=' . $row['id_regis'] . '">Hapus</a></td>';
+                    echo '<td>' .$row['alamat_ktp'] . '</td>';
+                    echo '<td>' .$row['alamat_email'] . '</td>';
+                    echo '<td>' .$row['no_telepon'] . '</td>';
+                    echo '<td><a href="update.php?id_regis=' . $row['id_regis'] . '"class="btn btn-update">Update</a></td>';
+                    echo '<td><a href="hapus.php?id_regis=' . $row['id_regis'] . '"class="btn btn-delete">Hapus</a></td>';
                     echo '</tr>';
                     $i++;
                 }
