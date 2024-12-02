@@ -1499,28 +1499,24 @@ button[type="submit"]:hover {
 /* #00b300 ijo tua  */
 /* #00ff37 ijo muda */
 /* styling untuk galeri */
-.galeri {
-    position: relative;
-    height: 60vh;
-    background: url("img/galery.jpg"); 
-    background-size: cover; /* Gambar memenuhi seluruh area . */
-    background-position: center; /* Gambar dipusatkan pada elemen. */
-    display: flex; /* menggunakan fleksibel untuk mengatur tata letak konten di dalamnya. */
-    flex-direction: column; /* Elemen dalam galeri ditumpuk secara vertikal. */
-    justify-content: center; /* Konten di tengah secara vertikal. */
-    align-items: center; /* Konten di tengah secara horizontal. */
-    color: white;
-    text-align: center; /* Teks rata tengah. */
-    padding: 20px; /* Menambahkan jarak dalam elemen. */
+#galeri {
+  padding-top: 80px;
+  width: 100%; /* Lebar dari layar */
+  height: 80vh; /* Tinggi 100% dari layar */
+  background: url("img/galery.jpg");
+  background-size: cover; /* Memastikan gambar background menutupi seluruh area */
+  background-position: center; /* Mengatur posisi gambar background di tengah */
+  position: relative;
 }
 
-        .hero h1 {
-    font-size: 3.5em; 
-    margin-bottom: 10px; /* Jarak bawah antar elemen h1 dan elemen berikutnya. */
+.galeri-subjudul h1 {
+color: #ffffff ;
+text-align: center;
 }
-
-.hero h2 {
-    font-size: 2.5em; 
+.galeri-subjudul h2 {
+  text-align: center;
+  color: #00b300;
+  margin-bottom: 20px;
 }
 
         .nav-buttons {

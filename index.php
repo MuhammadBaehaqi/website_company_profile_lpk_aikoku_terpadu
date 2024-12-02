@@ -10,40 +10,10 @@
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
-<div id="header">
-  <div class="container">
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo-container">
-          <a href="index.html" class="logo-link">
-            <img src="img/logo.png" alt="Logo" class="logo">
-            <span class="logo-text">LPK AIKOKU TERPADU</span>
-          </a>
-        </div>
-        
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="profile.html">Profile</a>
-        <div class="dropdown">
-          <a href="program.html">Program</a>
-          <div class="dropdown-content">
-            <a href="magang.html">Magang</a>
-            <a href="engineering.html">Engineering</a>
-            <a href="Tg.html">Tokutei Ginou</a>
-          </div>
-        </div>
-        <a href="galeri.html">Galeri</a>
-        <a href="contact.html">Contact</a>
-        <a href="form.php" class="daftar">Daftar Online</a>
-        <a href="login.php" class="login">login</a>
-        <!-- https://forms.gle/CHTg1iGXkm83KsU18 -->
-      </div>
-      <div class="menu-icon">
-        <i class="ph ph-list"></i>
-      </div>
-    </nav>
-  </div>
+<body>
+  <div id="header">
+  <!-- Navbar -->
+  <?php include('navbar.php'); ?>
   <div class="header-text">
     <h1>LPK AIKOKU TERPADU <br>愛国テレパデｳ</h1> 
     <p>Pusat Pelatihan Bahasa Jepang Terbaik untuk Mewujudkan </p> 
@@ -54,7 +24,7 @@
     <a href="form.php" class="btn">Daftar Sekarang</a>
   </div>
 </div>
-</div>
+
 <section class="welcome-section"> <!-- digunakan untuk membagi bagian dalam halaman web -->
   <h2 class="welcome-heading">SELAMAT DATANG</h2> 
   <div class="welcome-line"></div> <!--  membuat garis di bawah heading "SELAMAT DATANG". -->
@@ -93,13 +63,11 @@
     </div>
 
     <div class="card">
-      <!-- Elemen ini adalah satu card (kartu) individual. Kelas card akan memberikan gaya khusus pada setiap kartu, seperti ukuran, warna latar, bayangan, atau batas (border), sehingga setiap kartu memiliki tampilan konsisten. -->
       <div class="card-icon">
-        <!-- Bagian ini adalah container untuk ikon di dalam kartu. Kelas card-icon memberikan gaya khusus pada ikon, seperti ukuran, warna, atau posisi ikon di dalam kartu. -->
         <i class="fas fa-users"></i> <!-- untuk menampilkan ikon -->
       </div>
-      <h3 class="card-title">Lembaga Terpecaya</h3> <!-- Judul kartu menggunakan heading 3 -->
-      <p class="card-description"> <!-- Paragraf yang berisi deskripsi tentang Lembaga Terpecaya -->
+      <h3 class="card-title">Lembaga Terpecaya</h3>
+      <p class="card-description">
         Sebagai lembaga pelatihan bahasa Jepang yang berkomitmen pada kualitas, LPK Aikoku Terpadu membatasi jumlah
         siswa di setiap kelas untuk memastikan perhatian penuh dan pembelajaran yang optimal bagi setiap peserta.
       </p>
@@ -233,7 +201,7 @@
         <a href="https://www.facebook.com/lpk.aikokuterpadu?locale=id_ID" title="Facebook"><i
             class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/lpkaikokuterpadu/" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/+6285875962872" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.youtube.com/@lpkaikokuterpadu3616" title="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="lpkaikokuterpadu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
       </div>

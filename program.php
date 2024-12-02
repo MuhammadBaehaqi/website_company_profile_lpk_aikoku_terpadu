@@ -13,40 +13,12 @@
 
 <body>
     <div id="program">
-        <div class="container">
-            <!-- Navbar -->
-            <nav class="navbar">
-                <div class="logo-container">
-                    <a href="index.html" class="logo-link">
-                        <img src="img/logo.png" alt="Logo" class="logo">
-                        <span class="logo-text">LPK AIKOKU TERPADU</span>
-                    </a>
-                </div>
-                
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="profile.html">Profile</a>
-                    <div class="dropdown">
-                        <a href="program.html" class="active">Program</a>
-                        <div class="dropdown-content">
-                            <a href="magang.html">Magang</a>
-                            <a href="engineering.html">Engineering</a>
-                            <a href="Tg.html">Tokutei Ginou</a>
-                        </div>
-                    </div>
-                    <a href="galeri.html">Galeri</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="form.php" class="daftar">DAFTAR ONLINE</a>
-                    <a href="login.php" class="login">login</a>
-                </div>
-        </div>
-        <div class="menu-icon">
-            <i class="ph ph-list"></i>
-        </div>
-        </nav>
-    </div>
+        <!-- Navbar -->
+  <?php include('navbar.php'); ?>
+
     <div class="program-text">
         <h1>Program LPK Aikoku Terpadu</h1> <!-- heading level 1 yang menampilkan nama lembaga -->
+    </div>
     </div>
     <div class="container">
         <div class="services"> <!-- Container untuk kartu-kartu layanan -->
@@ -99,7 +71,7 @@
                             class="fab fa-facebook"></i></a>
                     <a href="https://www.instagram.com/lpkaikokuterpadu/" title="Instagram"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/+6285875962872" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.youtube.com/@lpkaikokuterpadu3616" title="YouTube"><i
                             class="fab fa-youtube"></i></a>
                     <a href="lpkaikokuterpadu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>

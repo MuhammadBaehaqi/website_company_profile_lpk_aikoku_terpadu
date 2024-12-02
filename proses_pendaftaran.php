@@ -35,7 +35,7 @@ $query = "INSERT INTO tb_pelajar (Nama_lengkap, TTL, tanggal_lahir, usia, Jenis_
 VALUES ('$Nama', '$TTL', '$tanggal_lahir', '$usia', '$jenis_kelamin', '$hobi', '$Agama', '$alamat_ktp', '$alamat_email', '$no_telepon',  '$alamat', '$alamat_keluarga', '$telepon_keluarga', '$bidang', '$pendidikan_terakhir', '$pengalaman_kerja', '$status_pernikahan', '$tinggi_badan', '$berat_badan', '$buta_warna', '$kesehatan', '$penyakit_kronis', '$golongan_darah', '$kewarganegaraan')";
     if (mysqli_query($koneksi, $query)) {
         // Redirect ke halaman home setelah berhasil
-        header("Location: index.html");
+        header("Location: index.php");
         exit;
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($koneksi);

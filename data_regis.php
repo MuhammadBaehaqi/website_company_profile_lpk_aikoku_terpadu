@@ -1,97 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Registration</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="Icon" href="img/logo.png" type="image/x-Icon">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-
-    
-        .table-container {
-    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+<?php
+include 'sidebar.php';
+?>
+<style>
+    /* Main Content */
+.main-content {
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
 
+/* Dashboard Header */
+.dashboard-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.dashboard-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0;
+}
+.dashboard-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin: 10px 0 0;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-        }
+/* Stats Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.stat-card {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.stat-card .number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-        table th, table td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-
-        table th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        table tr:hover {
-            background-color: #ddd;
-        }
-
-        .btn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin: 0 5px;
+/* Recent Activity */
+.recent-activity {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.recent-activity h2 {
+    margin: 0 0 15px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.activity-item {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
     border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #34495e;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.activity-item:hover {
+    background-color: #dcdde1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.btn-update {
-    background-color: #2196F3;
-    color: white;
-}
-
-.btn-update:hover {
-    background-color: #1976D2;
-}
-
-.btn-delete {
-    background-color: #f44336;
-    color: white;
-}
-
-.btn-delete:hover {
-    background-color: #d32f2f;
-}
-
-    </style>
-</head>
-<body>
-    <div class="sidebar">
-        <ul class="sidebar-menu">
-            <li>
-                <a href="db_admin.html" class="dashboard">Dashboard</a>
-            </li>
-            <li class="active">
-                <a href="data_regis.php" class="registration">Registration</a>
-            </li>
-            <li>
-                <a href="settings.php" class="settings">Settings</a>
-            </li>
-            <li>
-                <a href="" class="logout">Log Out</a>
-            </li>
-        </ul>
-    </div>
-    
+</style>
+<div class="main-content">
      <div class="table-container">
         <h2>Data Registration</h2>
         <table>
@@ -107,6 +105,8 @@
                     <th>Alamat KTP</th>
                     <th>Alamat Email</th>
                     <th>No Telepon/Whatsapp</th>
+                    <th>Alamat</th>
+                    <th>Alamat Keluarga</th>
                     <th>Update</th>
                     <th>Hapus</th>
                 </tr>
@@ -129,6 +129,8 @@
                     echo '<td>' .$row['alamat_ktp'] . '</td>';
                     echo '<td>' .$row['alamat_email'] . '</td>';
                     echo '<td>' .$row['no_telepon'] . '</td>';
+                    echo '<td>' .$row['alamat'] . '</td>';
+                    echo '<td>' .$row['alamat_keluarga'] . '</td>';
                     echo '<td><a href="update.php?id_regis=' . $row['id_regis'] . '"class="btn btn-update">Update</a></td>';
                     echo '<td><a href="hapus.php?id_regis=' . $row['id_regis'] . '"class="btn btn-delete">Hapus</a></td>';
                     echo '</tr>';
@@ -138,5 +140,4 @@
             </tbody>
         </table>
     </div>
-</body>
-</html>
+            </div>

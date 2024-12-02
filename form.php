@@ -12,36 +12,8 @@
 <body>
     <div class="container">
             <!-- Navbar -->
-            <nav class="navbar">
-        <div class="logo-container">
-          <a href="index.html" class="logo-link">
-            <img src="img/logo.png" alt="Logo" class="logo">
-            <span class="logo-text">LPK AIKOKU TERPADU</span>
-          </a>
+             <?php include('navbar.php'); ?>
         </div>
-
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="profile.html">Profile</a>
-                    <div class="dropdown">
-          	    <a href="program.html">Program</a>
-          		<div class="dropdown-content">
-            <a href="magang.html">Magang</a>
-            <a href="engineering.html">Engineering</a>
-            <a href="Tg.html">Tokutei Ginou</a>
-          </div>
-        </div>
-		<a href="galeri.html">Galeri</a>
-        <a href="contact.html">Contact</a>
-        <a href="form.php" class="daftar">Daftar Online</a>
-        <a href="login.php" class="login">login</a>
-        </div>
-		<div class="menu-icon">
-        <i class="ph ph-list"></i>
-		</div>
-		</nav>
-        </div>
-        
 		<section class="form">
       <div class="hero-content">
         <h1>LPK AIKOKU TERPADU</h1>
@@ -224,18 +196,22 @@
       <label for="nama_lengkap">Nama Lengkap:</label>
       <input type="text" id="nama_lengkap" name="kirim_nama" >
     </div>
+
     <div class="form-group">
       <label for="tempat_lahir">Tempat Lahir:</label>
       <input type="text" id="tempat_lahir" name="kirim_ttl" >
     </div>
+
     <div class="form-group">
       <label for="tanggal_lahir">Tanggal Lahir:</label>
       <input type="date" id="tanggal_lahir" name="kirim_tanggal_lahir" >
     </div>
+
         <div class="form-group">
       <label for="usia">Usia:</label>
-			<input type="varchar" id="usia" name="kirim_usia">
+			<input type="text" id="usia" name="kirim_usia">
     </div>
+
     <div class="form-group">
       <label for="jenis_kelamin">Jenis Kelamin:</label>
       <select id="jenis_kelamin" name="jenis_kelamin">
@@ -262,10 +238,12 @@
         <option value="Konghucu">Konghucu</option>
       </select>
     </div>
+
     <div class="form-group">
       <label for="alamat_ktp">Alamat KTP</label>
       <input type="text" id="alamat_ktp" name="kirim_alamat_ktp">
     </div>
+    
     <div class="form-group">
       <label for="email">Alamat Email:</label>
       <input type="email" id="email" name="alamat_email">
@@ -278,7 +256,7 @@
 
     <div class="form-group">
       <label for="alamat">Alamat:</label>
-      <textarea id="alamat" name="kirim_alamat" ></textarea>
+      <textarea id="text" name="kirim_alamat" ></textarea>
     </div>
 
     <div class="form-group">
@@ -300,7 +278,8 @@
 			<option value="TOKUTEI_GINOU">Tokutei Ginou</option>
 			<option value="ENGINEERING">Engineering</option>
 	</div>
-    <div class="form-group">
+
+  <div class="form-group">
       <label for="pendidikan_terakhir">Pendidikan Terakhir:</label>
       <select id="pendidikan_terakhir" name="kirim_pendidikan_terakhir">
         <option value="">Pilih Pendidikan Terakhir</option>
@@ -317,10 +296,12 @@
         <option value="S3">S3</option>
       </select>
     </div>
+      
     <div class="form-group">
       <label for="pengalaman_kerja">Pengalaman Kerja:</label>
       <textarea id="pengalaman_kerja" name="kirim_pengalaman_kerja"></textarea>
     </div>
+    
     <div class="form-group">
       <label for="status_pernikahan">Status Pernikahan:</label>
 			<select id="status_pernikahan" name="kirim_status_pernikahan">
@@ -396,7 +377,7 @@
                                 class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/lpkaikokuterpadu/" title="Instagram"><i
                                 class="fab fa-instagram"></i></a>
-                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/+6285875962872" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.youtube.com/@lpkaikokuterpadu3616" title="YouTube"><i
                                 class="fab fa-youtube"></i></a>
                         <a href="lpkaikokuterpadu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>

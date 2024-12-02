@@ -13,38 +13,7 @@
 
 <body>
     <div id="contact">
-        <div class="container">
-            <!-- Navbar -->
-            <nav class="navbar">
-                <div class="logo-container">
-                    <a href="index.html" class="logo-link">
-                        <img src="img/logo.png" alt="Logo" class="logo">
-                        <span class="logo-text">LPK AIKOKU TERPADU</span>
-                    </a>
-                </div>
-                
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="profile.html">Profile</a>
-                    <div class="dropdown">
-                        <a href="program.html">Program</a>
-                        <div class="dropdown-content">
-                            <a href="magang.html">Magang</a>
-                            <a href="engineering.html">Engineering</a>
-                            <a href="Tg.html">Tokutei Ginou</a>
-                        </div>
-                    </div>
-                    <a href="galeri.html">Galeri</a>
-                    <a href="contact.html" class="active">Contact</a>
-                    <a href="form.php" class="daftar">DAFTAR ONLINE</a>
-                    <a href="login.php" class="login">login</a>
-                </div>
-        </div>
-        <div class="menu-icon">
-            <i class="ph ph-list"></i>
-        </div>
-        </nav>
-    </div>
+        <?php include('navbar.php'); ?>
     
     <div class="container-contact">
         <!-- <img src="img/contact.png" alt="LPK Aikoku Terpadu Interior" class="hero-image"> -->
@@ -53,7 +22,8 @@
             <p>Dapatkan infromasi yang sebenar-benarnya tentang Jepang <br>dan program pemagangan kami. Kami siap
                 membantu Anda mencapai impian bekerja di Jepang.</p>
         </div>
-
+</div>
+</div>
 <!-- konten utama contact grid untuk mengelompokkan dan menyusun dua bagian, yaitu formulir pengiriman pesan dan informasi kontak,
 dalam layout grid. -->
 <!-- Label untuk memberikan petunjuk kepada pengguna mengenai data yang diminta. -->
@@ -63,29 +33,28 @@ dalam layout grid. -->
         <div class="contact-grid">
             <div class="contact-form">
                 <h2>Kirim Pesan</h2>
-                <form>
+                <form action="proses_contact.php" method="post">
                     <div class="form-group">
                         <label for="name">Nama Lengkap</label>
-                        <input type="varchar" id="name" name="name" required>
+                        <input type="text" id="name" name="kirim_name" required>
                     </div>
                     <div class="form-group">
                         <label for="whatsapp">Nomor WhatsApp</label>
-                        <input type="varchar" id="no_wa" name="no_wa" required>
+                        <input type="text" id="no_wa" name="kirim_wa" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Alamat Email</label>
-                        <input type="varchar" id="email" name="kirim_email" required>
+                        <input type="email" id="email" name="kirim_email" required>
                     </div>
                     <div class="form-group">
                         <label for="address">Alamat</label>
-                        <input type="varchar" id="alamat" name="kirim_alamat" required>
+                        <input type="text" id="alamat" name="kirim_alamat" required>
                     </div>
                     <div class="form-group">
-                        <!-- Tombol kirim untuk mengirimkan pesan. Ketika tombol ini ditekan, formulir akan disubmit. -->
                         <label for="message">Pesan/Kesan</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="kirim_pesan" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Kirim Pesan</button>
+                    <button type="submit" name="kirim_data" class="submit-btn">Kirim Pesan</button>
                 </form>
             </div>
 
@@ -143,7 +112,7 @@ dalam layout grid. -->
                             class="fab fa-facebook"></i></a>
                     <a href="https://www.instagram.com/lpkaikokuterpadu/" title="Instagram"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/+6285875962872" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.youtube.com/@lpkaikokuterpadu3616" title="YouTube"><i
                             class="fab fa-youtube"></i></a>
                     <a href="lpkaikokuterpadu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>

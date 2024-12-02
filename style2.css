@@ -10,20 +10,41 @@ body {
 
 .sidebar {
   width: 250px;
-  height: 100vh;
+  height: 100%;
   background-color: #181c14;
   position: fixed;
   left: 0;
   top: 0;
   padding: 20px 0;
+      overflow-y: auto;
+}
+
+.sidebar .logo {
+text-align: center;
+margin-bottom: 30px;
+}
+.sidebar .logo img {
+max-width: 100px;
+height: auto;
+}
+
+.sidebar .logo-text {
+font-size: 20px;
+text-align: center;
+font-weight: bold;
+margin-top: 10px;
+color: #00ff37;
 }
 
 .sidebar-menu {
   list-style: none;
+   padding: 0;
+  width: 100%;
 }
 
 .sidebar-menu li {
   padding: 15px 25px;
+  width: 100%;
   transition: all 0.3s ease;
 }
 
@@ -34,6 +55,9 @@ body {
 
 .sidebar-menu li a {
   color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   text-decoration: none;
   font-size: 16px;
   display: block;
@@ -44,20 +68,9 @@ body {
   font-size: 18px;
 }
 
-.dashboard::before {
-  content: "📊";
-}
-
-.registration::before {
-  content: "📝";
-}
-
-.settings::before {
-  content: "⚙️";
-}
-
-.logout::before {
-  content: "🚪";
+.sidebar-menu li a i {
+  font-size: 1.2rem;
+   margin-right: 10px;
 }
 
 /* Active menu item */

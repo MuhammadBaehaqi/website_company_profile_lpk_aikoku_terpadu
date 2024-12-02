@@ -15,6 +15,8 @@ Agama: <input type="text" name="agama2" value='<?php echo $hasil['Agama']?>'><br
 Alamat KTP: <input type="text" name="alamatktp2" value='<?php echo $hasil['alamat_ktp']?>'><br>
 Alamat Email: <input type="email" name="alamatemail2" value='<?php echo $hasil['alamat_email']?>'><br>
 No.Telepon/WhatsApp: <input type="text" name="telpon/whatsapp2" value='<?php echo $hasil['no_telepon']?>'><br>
+Alamat: <input type="text" name="alamat2" value='<?php echo $hasil['alamat']?>'><br>
+Alamat Keluarga: <input type="text" name="alamatkeluarga2" value='<?php echo $hasil['alamat']?>'><br>
 <input type="submit">
 </form>
 <?php
@@ -30,7 +32,9 @@ if(!empty($_POST)){
     $g = $_POST['alamatktp2']; 
     $h = $_POST['alamatemail2'];
     $i = $_POST['telpon/whatsapp2'];
-    $updt = $mysqli->query("update tb_pelajar set Nama_lengkap='$a', TTL='$b', tanggal_lahir='$c',  usia='$d', Jenis_Kelamin='$e', Agama='$f', alamat_ktp='$g', alamat_email='$h', no_telepon='$i' where id_regis='$id_regis'");
+    $j = $_POST['alamat2'];
+    $k = $_POST['alamatkeluarga2'];
+    $updt = $mysqli->query("update tb_pelajar set Nama_lengkap='$a', TTL='$b', tanggal_lahir='$c',  usia='$d', Jenis_Kelamin='$e', Agama='$f', alamat_ktp='$g', alamat_email='$h', no_telepon='$i', alamat='$j', alamat_keluarga='$k' where id_regis='$id_regis'");
     if($updt === TRUE){
         header('Location: data_regis.php');
     }else{
@@ -38,3 +42,4 @@ if(!empty($_POST)){
     }
 }
 ?>
+

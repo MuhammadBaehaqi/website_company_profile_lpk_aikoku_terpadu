@@ -1,3 +1,33 @@
+<?php
+session_start();
+require 'config.php';
+
+if (isset($_SESSION['username'])) {
+    header("location: db_admin.php");
+    exit();
+}
+
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['get_username'];
+    $password = md5($_POST['get_password']); // Hashing password
+
+    $stmt = $mysqli->prepare("SELECT * FROM tb_admin1 WHERE username = ? AND password = ?");
+    $stmt->bind_param('ss', $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $_SESSION['username'] = $username;
+        header("Location: db_admin.php");
+    } else {
+        $error = "Username atau password salah.";
+    }
+    $stmt->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +48,13 @@
             <h1>Selamat Datang</h1>
             <p>Silakan masuk ke akun Anda</p>
         </div>
-        <form class="login-form">
+        <form action="login.php" method="post" class="login-form">
             <div class="form-group">
-                <input type="text" id="username" placeholder="">
+                <input name="get_username" type="text" id="username" placeholder="">
                 <label for="username">Username</label>
             </div>
             <div class="form-group">
-                <input type="password" id="password" placeholder="">
+                <input name="get_password" type="password" id="password" placeholder="">
                 <label for="password">Password</label>
             </div>
             <button type="submit" class="login-button">Masuk</button>

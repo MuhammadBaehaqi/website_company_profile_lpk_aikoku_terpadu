@@ -90,98 +90,39 @@ include 'sidebar.php';
 
 </style>
 <div class="main-content">
-
-
-</div>
-     <!-- <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-   .main-content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 30px;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    .btn-container {
-      text-align: right;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #45a049;
-    }
-  </style>
-
- <div class="main-content">
-            <h1>Admin Settings</h1>
-    <div class="btn-container">
-      <button class="btn">Tambah Registrasi</button>
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Dashboard</h1>
+            <p>Welcome back, Admin!</p>
+        </div>
+    
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Jumlah Siswa-Siswi</h3>
+                <div class="number">1,234</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pendaftaran</h3>
+                <div class="number">56</div>
+            </div>
+            <div class="stat-card">
+                <h3>Aktif Siswa-Siswi</h3>
+                <div class="number">789</div>
+            </div>
+            <div class="stat-card">
+                <h3>Totak Keberangkatan</h3>
+                <div class="number">1,000</div>
+            </div>
+        </div>
+    
+        <div class="recent-activity">
+            <h2>Aktivitas Terbaru</h2>
+            <ul class="activity-list">
+                <li class="activity-item">Pendaftaran Terbaru: Haki</li>
+                <li class="activity-item">Pendaftaran Terbaru: Haki</li>
+                <li class="activity-item">Pendaftaran Terbaru: Haki</li>
+                <li class="activity-item">Pendaftaran Terbaru: Haki</li>
+                <li class="activity-item">Pendaftaran Terbaru: Haki</li>
+            </ul>
+        </div>
     </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Registration Date</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>John Doe</td>
-          <td>john.doe@example.com</td>
-          <td>2023-04-15</td>
-          <td>
-            <a href="#">Edit</a>
-            <a href="#">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jane Smith</td>
-          <td>jane.smith@example.com</td>
-          <td>2023-05-01</td>
-          <td>
-            <a href="#">Edit</a>
-            <a href="#">Delete</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
+        
