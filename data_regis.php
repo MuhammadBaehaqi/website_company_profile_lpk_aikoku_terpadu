@@ -1,97 +1,100 @@
 <?php
 include 'sidebar.php';
 ?>
-<style>
+<head>
+    <title>Data Registrasi</title>
+    <style>
     /* Main Content */
+/* Main container styling */
 .main-content {
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
     padding: 20px;
-    background-color: #fff;
+    transition: margin 0.3s ease-in-out;
+}
+
+/* Table container */
+.table-container h2 {
+    text-align: center;
     color: #333;
-    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
 }
 
-/* Dashboard Header */
-.dashboard-header {
-    margin-bottom: 20px;
+.table-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header */
+.table-container table thead th {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Table rows */
+.table-container table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-container table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.table-container table tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
     text-align: center;
-}
-.dashboard-title {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin: 0;
-}
-.dashboard-header p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin: 10px 0 0;
-}
-
-/* Stats Container */
-.stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
-}
-.stat-card {
-    background-color: #3498db;
+    display: inline-block;
     color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.stat-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.stat-card .number {
-    font-size: 2rem;
-    font-weight: bold;
-}
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Recent Activity */
-.recent-activity {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.btn-update {
+    background-color: #28a745;
 }
-.recent-activity h2 {
-    margin: 0 0 15px;
-    font-size: 1.5rem;
-    color: #2c3e50;
+
+.btn-update:hover {
+    background-color: #218838;
 }
-.activity-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+.btn-delete {
+    background-color: #dc3545;
 }
-.activity-item {
-    padding: 10px;
-    background-color: #fff;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    color: #34495e;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-.activity-item:hover {
-    background-color: #dcdde1;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+.btn-delete:hover {
+    background-color: #c82333;
 }
 
 </style>
+</head>
+    
+
 <div class="main-content">
      <div class="table-container">
         <h2>Data Registration</h2>
+        <div class="table-scroll-wrapper">
         <table>
             <thead>
                 <tr>
@@ -139,5 +142,6 @@ include 'sidebar.php';
                 ?>
             </tbody>
         </table>
+    </div>
     </div>
             </div>

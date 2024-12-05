@@ -3,7 +3,7 @@ session_start();
 require 'config.php';
 
 if (isset($_SESSION['username'])) {
-    header("location: db_admin.php");
+    header("Location: db_admin.php");
     exit();
 }
 
@@ -11,8 +11,9 @@ $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['get_username'];
-    $password = md5($_POST['get_password']); // Hashing password
+    $password = md5($_POST['get_password']); // Hashing password dengan MD5
 
+    // Query menggunakan prepared statement
     $stmt = $mysqli->prepare("SELECT * FROM tb_admin1 WHERE username = ? AND password = ?");
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
@@ -26,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $stmt->close();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <a href="index.html" class="back-button">Kembali</a>
+        <a href="index.php" class="back-button">Kembali</a>
         <div class="logo-container">
     <img src="img/logo.png" alt="Logo" class="logo">
 </div>
@@ -47,7 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login-header">
             <h1>Selamat Datang</h1>
             <p>Silakan masuk ke akun Anda</p>
+            <?php if ($error): ?>
+                <p class="error"><?php echo $error; ?></p>
+            <?php endif; ?>
         </div>
+        
         <form action="login.php" method="post" class="login-form">
             <div class="form-group">
                 <input name="get_username" type="text" id="username" placeholder="">

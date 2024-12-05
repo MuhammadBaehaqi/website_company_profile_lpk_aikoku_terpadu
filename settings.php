@@ -1,6 +1,8 @@
 <?php
 include 'sidebar.php';
 ?>
+<head>
+  <title>Settings</title>
 <style>
     /* Main Content */
 .main-content {
@@ -89,6 +91,7 @@ include 'sidebar.php';
 }
 
 </style>
+</head>
 <div class="main-content">
 
 

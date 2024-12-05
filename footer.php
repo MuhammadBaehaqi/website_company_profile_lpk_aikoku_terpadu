@@ -1,83 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tokutei Ginou</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="Icon" href="img/logo.png" type="image/x-Icon">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="Icon" href="img/logo.png" type="image/x-Icon">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="Tg">
-        <div class="container">
-            <!-- Navbar -->
-            <nav class="navbar">
-                <div class="logo-container">
-                    <a href="index.html" class="logo-link">
-                        <img src="img/logo.png" alt="Logo" class="logo">
-                        <span class="logo-text">LPK AIKOKU TERPADU</span>
-                    </a>
-                </div>
-                
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="profile.html">Profile</a>
-                    <div class="dropdown">
-                        <a href="program.html" class="active">Program</a>
-                        <div class="dropdown-content">
-                            <a href="magang.html">Magang</a>
-                            <a href="engineering.html">Engineering</a>
-                            <a href="Tg.html">Tokutei Ginou</a>
-                        </div>
-                    </div>
-                    <a href="galeri.html">Galeri</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="from.html" class="daftar">Daftar Online</a>
-                    <a href="login.php" class="login">login</a>
-                </div>
-        </div>
-        <div class="menu-icon">
-            <i class="ph ph-list"></i>
-        </div>
-        </nav>
-        </div>
 
-    <div class="semua-program-text">
-        <h1>Program Tokutei Ginou</h1>
-        <p>Program Tokutei Ginou bagi yang baru ke Jepang bagi yang baru pertama kali ingin bekerja di Jepang.</p>
-        <a href="form.php" class="semua-program-button">Daftar Sekarang</a>
-    </div>
-    
-    <div class="container-semua-program">
-        <div class="card-semua-program">
-            <h2>Persyaratan Umum</h2>
-            <ol class="requirements-list">
-                <li>Laki-Laki/Perempuan</li>
-                <li>Umur 18 – 32 tahun.</li>
-                <li>Pend, Min. MA,SMA/SMK/Sederajat</li>
-                <li>Tidak Buta Warna</li>
-                <li>Sehat Jasmani dan Rohani.</li>
-                <li>Bersedia mengikuti pembelajaran bahasa Jepang di LPK Aikoku Terpadu.</li>
-                <li>Tidak Bertindik & Bertato</li>
-            </ol>
-        </div>
-    
-        <div class="card-semua-program">
-            <h2>Persyaratan Dokumen</h2>
-            <ol class="requirements-list">
-                <li>Fc & Asli Ijasah (SD, SMP, SMA/SMK, dan Diploma/Universitas kalau ada).</li>
-                <li>Fc Kartu Tanda Penduduk (KTP).</li>
-                <li>Fc Kartu Keluarga (KK).</li>
-                <li>Fc & Asli Akte Kelahiran (Akte).</li>
-                <li>Pas Foto Berbentuk JPG (Background Putih).</li>
-            </ol>
-        </div>
-    </div>
-
-
-    <footer class="footer">
+<footer class="footer">
         <div class="footer-content">
             <!-- Logo & Description Section -->
             <div class="footer-section">
@@ -103,10 +36,10 @@
             <div class="footer-section">
                 <h3 class="footer-heading">Menu</h3>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="program.html">Program</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="profile.php">Profile</a></li>
+                    <li><a href="program.php">Program</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="form.php" class="daftar-link">Daftar Online</a></li>
                     <li><a href="login.php" class="daftar-link">Login</a></li>
                 </ul>
@@ -152,5 +85,5 @@
             <p>&copy; 2024 LPK Aikoku Terpadu. All rights reserved.</p>
         </div>
     </footer>
-</body>
-</html>
+    </body>
+    </html>

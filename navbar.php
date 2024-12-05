@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="logo-container">
-        <a href="index.html" class="logo-link">
+        <a href="index.php" class="logo-link">
           <img src="img/logo.png" alt="Logo" class="logo">
           <span class="logo-text">LPK AIKOKU TERPADU</span>
         </a>

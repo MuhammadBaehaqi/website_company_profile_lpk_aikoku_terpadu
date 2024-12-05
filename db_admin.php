@@ -1,6 +1,8 @@
 <?php
 include 'sidebar.php';
 ?>
+<head>
+    <title>Dashboard</title>
 <style>
     /* Main Content */
 .main-content {
@@ -87,8 +89,9 @@ include 'sidebar.php';
     background-color: #dcdde1;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
-
 </style>
+</head>
+
 <div class="main-content">
         <div class="dashboard-header">
             <h1 class="dashboard-title">Dashboard</h1>

@@ -1,94 +1,141 @@
 <?php
 include 'sidebar.php';
 ?>
+<head>
+    <title>Data Pengguna</title>
 <style>
-    /* Main Content */
-.main-content {
+    .main-content {
+    margin-left: 250px; /* Adjust based on sidebar width */
     padding: 20px;
-    background-color: #fff;
-    color: #333;
-    font-family: Arial, sans-serif;
+    transition: margin-left 0.3s ease;
 }
 
-/* Dashboard Header */
-.dashboard-header {
-    margin-bottom: 20px;
-    text-align: center;
-}
-.dashboard-title {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin: 0;
-}
-.dashboard-header p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin: 10px 0 0;
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-/* Stats Container */
-.stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
-.stat-card {
-    background-color: #3498db;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.stat-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.stat-card .number {
-    font-size: 2rem;
-    font-weight: bold;
-}
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+.show-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Recent Activity */
-.recent-activity {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.recent-activity h2 {
-    margin: 0 0 15px;
-    font-size: 1.5rem;
-    color: #2c3e50;
-}
-.activity-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.activity-item {
-    padding: 10px;
-    background-color: #fff;
-    margin-bottom: 10px;
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
     border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    color: #34495e;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.activity-item:hover {
-    background-color: #dcdde1;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+.btn-add:hover {
+    background-color: #45a049;
+}
+
+#show {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#search {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table thead {
+    background-color: #f2f2f2;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-edit, .btn-delete {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #1976D2;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0; /* Full width on smaller screens */
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .show-search {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #search, #show {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
 }
 
 </style>
+</head>
 <div class="main-content">
         <div class="container">
             <div class="controls">
@@ -108,19 +155,30 @@ include 'sidebar.php';
                     <tr>
                         <th>Id</th>
                         <th>Username</th>
-                        <th>Email</th>
                         <th>Password</th>
-                        <th>Level</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <?php
+                include 'config.php'; // Pastikan file config.php berisi koneksi ke database
+                $result = $mysqli->query("SELECT * FROM tb_admin1"); // Ambil data dari tabel tb_pelajar
+                $i = 1;
+                while ($row = $result->fetch_assoc()) {
+                    echo '<tr>';
+                    echo '<td>' . $i . '</td>';
+                    echo '<td>' .$row['username'] . '</td>';
+                    echo '<td>' .$row['password'] . '</td>';
+                    echo '<td><a href="edit.php?id_admin=' . $row['id_admin'] . '"class="btn btn-update">Edit</a></td>';
+                    echo '<td><a href="hapus_admin.php?id_admin=' . $row['id_admin'] . '"class="btn btn-delete">Hapus</a></td>';
+                    echo '</tr>';
+                    $i++;
+                }
+                ?>
+                    <!-- <tr>
                         <td>1</td>
                         <td>Imam Joharudin</td>
-                        <td>imamjoharudin12@gmail.com</td>
-                        <td>123</td>
-                        <td>admin</td>
+                        <td>imam123</td>
                         <td>
                             <button class="btn-edit">Edit</button>
                             <button class="btn-delete">Hapus</button>
@@ -129,9 +187,7 @@ include 'sidebar.php';
                     <tr>
                         <td>2</td>
                         <td>Ali Chamdan</td>
-                        <td>alichamdan@gmail.com</td>
-                        <td>123</td>
-                        <td>admin</td>
+                        <td>ali123</td>
                         <td>
                             <button class="btn-edit">Edit</button>
                             <button class="btn-delete">Hapus</button>
@@ -139,10 +195,8 @@ include 'sidebar.php';
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Okta Hidayat</td>
-                        <td>oktahidayat@gmail.com</td>
-                        <td>123</td>
-                        <td>admin</td>
+                        <td>Octa Hidayat</td>
+                        <td>octa123</td>
                         <td>
                             <button class="btn-edit">Edit</button>
                             <button class="btn-delete">Hapus</button>
@@ -151,15 +205,14 @@ include 'sidebar.php';
                     <tr>
                         <td>4</td>
                         <td>Muhammad Baehaki</td>
-                        <td>muhammadbaehaqi12@gmail.com</td>
-                        <td>123</td>
-                        <td>admin</td>
+                        <td>haki123</td>
                         <td>
                             <button class="btn-edit">Edit</button>
                             <button class="btn-delete">Hapus</button>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
     </main>
+    </div>

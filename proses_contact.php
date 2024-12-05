@@ -15,7 +15,7 @@ $query = "INSERT INTO tb_contact (nama_contact, no_contact, email_contact, alama
 VALUES ('$nama', '$wa', '$email2', '$alamat2', '$pesan' )";
     if (mysqli_query($koneksi, $query)) {
         // Redirect ke halaman home setelah berhasil
-        header("Location: index.html");
+        header("Location: index.php");
         exit;
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($koneksi);

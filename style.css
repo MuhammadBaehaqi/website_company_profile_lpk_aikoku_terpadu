@@ -1499,7 +1499,7 @@ button[type="submit"]:hover {
 /* #00b300 ijo tua  */
 /* #00ff37 ijo muda */
 /* styling untuk galeri */
-#galeri {
+.galeri {
   padding-top: 80px;
   width: 100%; /* Lebar dari layar */
   height: 80vh; /* Tinggi 100% dari layar */
