@@ -140,6 +140,12 @@ table tr:hover {
 </style>
 </head>
 <div class="main-content">
+        <?php
+        if ($_SESSION['role'] !== 'admin') {
+            echo "Anda tidak berhak mengakses halaman ini.";
+            exit;
+        }
+        ?>
         <div class="container">
             <div class="controls">
                 <a href="tambah_pengguna.php" class="btn-add">Tambah Data Pengguna</a>

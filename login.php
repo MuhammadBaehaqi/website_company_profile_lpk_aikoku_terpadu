@@ -21,7 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
+        $data_session = $result->fetch_assoc();
         $_SESSION['username'] = $username;
+        $_SESSION['role'] = $data_session['roles'];
         header("Location: db_admin.php");
     } else {
         $error = "Username atau password salah.";

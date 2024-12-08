@@ -131,6 +131,13 @@ include 'sidebar.php';
     
 
 <div class="main-content">
+    <?php
+        if ($_SESSION['role'] !== 'user') {
+            echo "Gaboleh masuk.";
+            exit;
+        }
+        ?>
+    
      <div class="table-container">
         <h2>Data Registration</h2>
         <div class="table-scroll-wrapper">
