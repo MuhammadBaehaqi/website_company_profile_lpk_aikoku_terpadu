@@ -14,9 +14,7 @@
 <body>
     <div id="magang">
         <?php include('navbar.php'); ?>
-        </div>
-
-        
+        </div>        
             <div class="semua-program-text">
                 <h1>Program Magang</h1>
                 <p>Program Magang ke Jepang bagi yang baru pertama kali ingin bekerja di Jepang</p>

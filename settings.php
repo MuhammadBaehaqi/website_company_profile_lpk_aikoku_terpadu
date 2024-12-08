@@ -1,4 +1,5 @@
 <?php
+include 'cek_auth.php';
 include 'sidebar.php';
 ?>
 <head>

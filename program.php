@@ -17,11 +17,11 @@
   <?php include('navbar.php'); ?>
 
     <div class="program-text">
-        <h1>Program LPK Aikoku Terpadu</h1> <!-- heading level 1 yang menampilkan nama lembaga -->
+        <h1>Program LPK Aikoku Terpadu</h1> 
     </div>
     </div>
     <div class="container">
-        <div class="services"> <!-- Container untuk kartu-kartu layanan -->
+        <div class="services">
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fa-regular fa-handshake"></i>

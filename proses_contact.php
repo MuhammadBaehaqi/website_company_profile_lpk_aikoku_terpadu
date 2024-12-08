@@ -1,5 +1,5 @@
 <?php
-// ini proses pendaftaran yang berkaitan ke database myphpadmin
+// ini database myphpadmin
 include_once("config.php");
 
 

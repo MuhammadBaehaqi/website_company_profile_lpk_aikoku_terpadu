@@ -104,14 +104,9 @@ body {
   font-weight: bold;
   color: #ffffff;
 }
-/* .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-} */
 
 .navbar {
-  display: flex; /* untuk mengatur agar tampil dengan tata letak dan diatur secara horizontal (dalam satu baris) atau vertikal, tergantung pada kebutuhan. */
+  display: flex; /* untuk mengatur agar tampil dengan tata letak dan diatur secara horizontal. */
   justify-content: space-between; /* Memberi jarak antara item di navbar */
   align-items: center; /* Mengatur item vertikal di tengah */
   padding: 1rem 5%; /* Padding 1rem atas-bawah, 5% kiri-kanan */
@@ -138,7 +133,7 @@ body {
   text-decoration: none; /* Menghilangkan garis bawah link */
   font-weight: 500;
   transition: color 0.5s ease; /* Animasi perubahan warna */
-  position: relative; /* Diperlukan untuk efek garis bawah */
+  position: relative; /*  untuk efek garis bawah */
   padding: 5px 0; /* Padding atas bawah 5px */
 }
 
@@ -449,8 +444,8 @@ body {
 .facility-icon {
   width: 60px; /* Lebar lingkaran ikon */
   height: 60px; /* Tinggi lingkaran ikon */
-  background: #009879; /* Warna latar belakang hijau */
-  border-radius: 50%; /* Membuat bentuk lingkaran sempurna */
+  background: #009879; 
+  border-radius: 50%; 
   display: flex; /* Menggunakan flexbox */
   align-items: center; /* Memusatkan ikon secara vertikal */
   justify-content: center; /* Memusatkan ikon secara horizontal */
@@ -463,16 +458,16 @@ body {
 }
 
 .facility-title {
-  font-size: 20px; /* Ukuran teks judul */
+  font-size: 20px; 
   font-weight: bold;
-  color: #333; /* Warna teks abu-abu gelap */
+  color: #333; 
   margin-bottom: 15px; /* Jarak ke bawah 15px */
 }
 
 .facility-description {
   color: #666;
   line-height: 1.6; /* Jarak antar baris */
-  font-size: 14px; /* Ukuran teks deskripsi */
+  font-size: 14px;
 }
 
 /* Container utama testimonial */
@@ -531,7 +526,7 @@ body {
   display: flex; /* Menggunakan flexbox layout */
   align-items: center; /* Menengahkan item secara vertikal */
   justify-content: center; /* Menengahkan item secara horizontal */
-  gap: 15px; /* Jarak antar elemen 15 pixel */
+  gap: 15px; 
 }
 
 /* Gambar penulis */
@@ -543,7 +538,7 @@ body {
 
 /* Informasi penulis */
 .author-info {
-  text-align: left; /* Rata kiri untuk teks informasi penulis */
+  text-align: left; 
 }
 
 /* Nama penulis */
@@ -560,7 +555,7 @@ body {
   margin: 5px 0 0; /* Margin atas 5 pixel */
 }
 
-/* Media untuk layar kecil */ /* gunanya untuk layar dengan lebar maksimum 600px. media query ini hanya berlaku untuk layar dengan lebar 600px atau kurang.*/
+/* Media untuk layar kecil */
 @media (max-width: 600px) {
   .title {
     font-size: 20px; /* Ukuran font lebih kecil */
@@ -590,11 +585,8 @@ body {
 .footer-content {
   max-width: 1400px;
   margin: 0 auto; /* diatur menjadi 0 auto,sehingga konten berada ditengah */
-  display: grid; /* footer ditampilkan menggunakan grid layout dengan 4 kolom */
-  grid-template-columns: repeat(
-    4,
-    1fr
-  ); /* Mengatur kolom pada grid dengan menggunakan fungsi repeat. dengan jumlah 4 kolom dan 1fr untuk membagi ruang secara merata   */
+  display: grid; /* menggunakan grid layout dengan 4 kolom */
+  grid-template-columns: repeat( 4, 1fr); /* Mengatur kolom pada grid dengan menggunakan fungsi repeat. dengan jumlah 4 kolom dan 1fr untuk membagi ruang secara merata   */
   gap: 40px;
   padding: 0 40px; /* Padding kiri dan kanan konten footer diatur menjadi 40 piksel */
 }
@@ -630,7 +622,7 @@ body {
 
 /* Quick Links Styling */
 .footer-links {
-  list-style: none; /* Menghilangkan bullet atau tanda list pada elemen menu, dan membuat daftar terlihat rapi */
+  list-style: none; /* Menghilangkan bullet atau tanda list pada elemen menu */
   padding: 0; /* Menghapus padding default pada elemen daftar, membuat elemen di dalamnya menempel langsung ke tepi elemen pembungkus */
   margin: 0; /* Menghapus margin default pada elemen daftar, sehingga tidak ada jarak tambahan di luar elemen daftar. */
 }
@@ -666,7 +658,7 @@ body {
 }
 
 .daftar-button:hover {
-  background-color: transparent; /* mengatur waran latar belakang menjadi transparan */
+  background-color: transparent; /* mengatur warna latar belakang menjadi transparan */
   color: #00ff37;
   transform: translateY(-3px); /*  Menggeser elemen ke atas sebesar 3 piksel */
   box-shadow: 0 5px 15px rgba(0, 255, 55, 0.3); /* Menambahkan bayangan di bawah elemen dengan efek warna hijau */
@@ -694,9 +686,7 @@ body {
 .footer-links .daftar-link:hover {
   background-color: transparent;
   color: #00ff37 !important; /* Mengubah warna teks menjadi hijau cerah saat di-hover */
-  transform: translateY(
-    -3px
-  ); /* Menggeser elemen ke atas sebesar 3 piksel saat di-hover */
+  transform: translateY(-3px); /* Menggeser elemen ke atas sebesar 3 piksel saat di-hover */
   box-shadow: 0 5px 15px rgba(0, 255, 55, 0.3);
 }
 
@@ -762,10 +752,7 @@ body {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .footer-content {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Mengatur tata letak grid dengan dua kolom saat lebar layar kurang dari 1200px */
+    grid-template-columns: repeat(2, 1fr); /* Mengatur tata letak grid dengan dua kolom saat lebar layar kurang dari 1200px */
   }
 }
 
@@ -967,61 +954,65 @@ p {
   object-fit: cover; /* memastikan gambar atau video tetap mempertahankan rasio aslinya,  */
 }
 
+/* Styling untuk bagian informasi anggota */
 .member-info {
-  padding: 20px;
-  text-align: center;
+  padding: 20px; 
+  text-align: center; /* Mengatur teks menjadi rata tengah */
 }
 
+/* Styling untuk judul nama anggota */
 .member-info h3 {
-  color: #333;
-  margin-bottom: 5px;
-  font-size: 1.2em;
+  color: #333; 
+  margin-bottom: 5px; /* Memberikan jarak bawah 5px */
+  font-size: 1.2em; /* Ukuran font relatif lebih besar */
 }
 
 .member-info .position {
-  color: #00b300;
-  font-weight: bold;
-  margin-bottom: 10px;
+  color: #00b300; 
+  font-weight: bold; 
+  margin-bottom: 10px; /* Memberikan jarak bawah 10px */
 }
 
 .member-info .description {
   color: #666;
-  font-size: 0.9em;
-  line-height: 1.6;
+  font-size: 0.9em; /* Ukuran font lebih kecil */
+  line-height: 1.6; /* Memberikan jarak antar baris */
 }
 
 .member-social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+  display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 15px; /* Memberikan jarak atas 15px */
 }
 
 .member-social a {
-  color: #666;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #666; 
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  transition: color 0.3s ease; /* Memberikan efek transisi warna saat hover */
 }
 
+/* Efek hover pada link sosial media */
 .member-social a:hover {
-  color: #00b300;
+  color: #00b300; 
 }
 
-/* Responsive adjustments */
+/* responsif untuk layar kecil */
 @media (max-width: 768px) {
   .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Kolom otomatis menyesuaikan dengan lebar minimal 200px */
+    gap: 20px; /* Memberikan jarak antar item dalam grid */
   }
 
   .member-image {
-    height: 250px;
+    height: 250px; /* Mengatur tinggi gambar anggota menjadi 250px */
   }
 
   .team-header h1 {
-    font-size: 2em;
+    font-size: 2em; /* Mengatur ukuran font lebih kecil pada layar kecil */
   }
 }
+
 
 /* styling legalitas */
 .header {
@@ -1078,7 +1069,7 @@ p {
 .legal-item h3 {
   font-size: 1.1em;
   color: #333;
-  margin-bottom: 15px; /* Memberikan jarak 15px di bawah elemen judul. */
+  margin-bottom: 15px; /* Memberikan jarak 15px di bawah judul. */
   line-height: 1.4; /* Mengatur jarak antar baris pada teks */
 }
 
@@ -1103,7 +1094,7 @@ p {
 
 @media (max-width: 768px) {
   .container {
-    padding: 20px; /* Pada layar dengan lebar 768px atau lebih kecil (misalnya perangkat mobile), menambahkan padding 20px pada elemen dengan kelas .container. */
+    padding: 20px; /* Pada layar dengan lebar 768px atau lebih kecil (misalnya perangkat mobile), menambahkan padding 20px pada .container. */
   }
 
   .header h1 {
@@ -1195,7 +1186,7 @@ textarea: Memberikan kemampuan untuk merubah ukuran vertikal */
 
 .form-group textarea {
   height: 150px;
-  resize: vertical; /*  dapat mengubah ukuran textarea secara vertikal (atas-bawah), */
+  resize: vertical; /*  dapat mengubah ukuran textarea secara vertikal (atas-bawah) saja */
 }
 
 .submit-btn {
@@ -1222,17 +1213,17 @@ textarea: Memberikan kemampuan untuk merubah ukuran vertikal */
 
 .contact-info h3 {
   color: #333;
-  margin-bottom: 1rem; /* Jarak bawah elemen <h3> akan menjadi 1 rem */
+  margin-bottom: 1rem; /* Jarak bawah 1 rem */
 }
 
 .contact-info p {
-  margin-bottom: 0.5rem; /* Jarak bawah elemen <p> akan menjadi 0.5 rem */
+  margin-bottom: 0.5rem; /* Jarak bawah 0.5 rem */
   color: #555;
 }
 
 .map-container {
   height: 400px;
-  margin-top: 2rem; /* Jarak atas elemen akan menjadi 2 rem */
+  margin-top: 2rem; /* Jarak atas 2 rem */
 }
 
 .map-container iframe {
@@ -1245,7 +1236,7 @@ textarea: Memberikan kemampuan untuk merubah ukuran vertikal */
 /* ukuran layar kurang dari atau sama dengan 768px (perangkat mobile), grid layout berubah menjadi satu kolom untuk elemen */
 @media (max-width: 768px) {
   .contact-grid {
-    grid-template-columns: 1fr; /* Pada ukuran layar ini, grid-template-columns diatur menjadi 1fr, artinya grid akan */
+    grid-template-columns: 1fr; /* Pada ukuran layar ini, grid-template-columns diatur menjadi 1fr, untuk tata letak yang lebih baik pada layar kecil */
   }
 }
 /* end styling contact */
@@ -1341,26 +1332,28 @@ textarea: Memberikan kemampuan untuk merubah ukuran vertikal */
 h2 {
   text-align: center;
   color: #00b300;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* jarak bawah 20px */
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Memberikan jarak bawah antar grup form */
 }
+
 
 label {
-  display: block;
+  display: block; /* Menampilkan label sebagai blok */
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Memberikan jarak bawah 5px */
 }
 
+/* Styling untuk input, select, dan textarea */
 input[type="text"],
 input[type="date"],
 input[type="email"],
 select,
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 10px; /* Memberikan jarak di dalam elemen */
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
@@ -1370,18 +1363,20 @@ textarea {
   height: 100px;
 }
 
+/* Styling untuk tombol submit */
 button[type="submit"] {
-  display: block;
+  display: block; /* Menampilkan tombol sebagai elemen blok */
   width: 100%;
-  padding: 10px;
+  padding: 10px; /* Memberikan jarak dalam tombol */
   background-color: #00ff00;
   color: #fff;
-  border: none;
+  border: none; /* Menghapus border default */
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
 }
 
+/* Efek hover untuk tombol submit */
 button[type="submit"]:hover {
   background-color: #00B300;
 }

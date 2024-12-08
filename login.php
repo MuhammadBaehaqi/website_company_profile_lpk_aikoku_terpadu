@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = md5($_POST['get_password']); // Hashing password dengan MD5
 
     // Query menggunakan prepared statement
+    //s itu string ,ss itu menunjukan kedua variabel atau parameter $username dan $password
     $stmt = $mysqli->prepare("SELECT * FROM tb_admin1 WHERE username = ? AND password = ?");
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style_login.css">
     <link rel="Icon" href="img/logo.png" type="image/x-Icon">
 </head>
 <body>
@@ -66,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="login-button">Masuk</button>
         </form>
         <div class="forgot-password">
-            <a href="#">Lupa password?</a>
+            <a href="lupa_pw.php">Lupa password?</a>
         </div>
     </div>
 </body>

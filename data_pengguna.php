@@ -1,31 +1,32 @@
 <?php
+include 'cek_auth.php';
 include 'sidebar.php';
 ?>
 <head>
     <title>Data Pengguna</title>
 <style>
     .main-content {
-    margin-left: 250px; /* Adjust based on sidebar width */
-    padding: 20px;
-    transition: margin-left 0.3s ease;
+    margin-left: 250px; /* Memberikan margin kiri untuk sesuaikan sidebar */
+    padding: 20px; /* Memberikan jarak di dalam konten */
+    transition: margin-left 0.3s ease; 
 }
 
 .container {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 20px; /* Memberikan jarak di dalam container */
 }
 
 .controls {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Mengatur elemen secara fleksibel */
+    justify-content: space-between; /* Membagi ruang antara elemen */
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Memberikan jarak bawah */
 }
 
 .show-search {
-    display: flex;
+    display: flex; /* Menata elemen secara fleksibel */
     align-items: center;
     gap: 10px;
 }
@@ -33,8 +34,9 @@ include 'sidebar.php';
 .btn-add {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    padding: 10px 15px;
+    border: none; /* Menghapus border */
+    text-decoration: none;
+    padding: 10px 15px; /* Memberikan jarak di dalam tombol */
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -45,13 +47,13 @@ include 'sidebar.php';
 }
 
 #show {
-    padding: 5px;
+    padding: 5px;  /* Memberikan jarak dalam input */
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
 #search {
-    padding: 5px;
+    padding: 5px;  /* Memberikan jarak dalam input */
     border: 1px solid #ddd;
     border-radius: 4px;
     width: 200px;
@@ -59,8 +61,8 @@ include 'sidebar.php';
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+    border-collapse: collapse; /* Menghilangkan jarak antar border */
+    margin-top: 10px; /* Memberikan jarak atas */
 }
 
 table thead {
@@ -68,61 +70,62 @@ table thead {
 }
 
 table th, table td {
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+    text-align: left; /* Menyelaraskan teks ke kiri */
+    padding: 12px; /* Memberikan jarak dalam sel tabel */
+    border-bottom: 1px solid #ddd; 
 }
 
+/* Warna latar untuk baris genap */
 table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; 
 }
 
 table tr:hover {
     background-color: #f5f5f5;
 }
-
-.btn-edit, .btn-delete {
-    padding: 6px 10px;
-    margin-right: 5px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Buttons */
+.btn {
+    text-decoration: none;
+    padding: 8px 12px; /* Memberikan jarak dalam tombol */
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block; /* Membuat tombol tampil sebagai elemen blok inline */
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn-edit {
-    background-color: #2196F3;
-    color: white;
+    background-color: #28a745;
 }
 
 .btn-edit:hover {
-    background-color: #1976D2;
+    background-color: #218838;
 }
 
 .btn-delete {
-    background-color: #f44336;
-    color: white;
+    background-color: #dc3545;
 }
 
 .btn-delete:hover {
-    background-color: #d32f2f;
+    background-color: #c82333;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media screen and (max-width: 768px) {
     .main-content {
-        margin-left: 0; /* Full width on smaller screens */
+        margin-left: 0; /* Konten utama memenuhi lebar penuh pada layar kecil */
     }
 
     .controls {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column; /* Menata secara vertikal */
+        align-items: stretch; /* Mengatur agar memenuhi lebar container */
         gap: 10px;
     }
 
     .show-search {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column; /* Menata filter dan pencarian secara vertikal */
+        align-items: stretch; /* Mengatur agar memenuhi lebar container */
     }
 
     #search, #show {
@@ -139,7 +142,7 @@ table tr:hover {
 <div class="main-content">
         <div class="container">
             <div class="controls">
-                <button class="btn-add">Tambah Data Pengguna</button>
+                <a href="tambah_pengguna.php" class="btn-add">Tambah Data Pengguna</a>
                 <div class="show-search">
                     <label for="show">Show: </label>
                     <select id="show">
@@ -151,25 +154,27 @@ table tr:hover {
                 </div>
             </div>
             <table>
+                
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Username</th>
                         <th>Password</th>
                         <th>Aksi</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                include 'config.php'; // Pastikan file config.php berisi koneksi ke database
-                $result = $mysqli->query("SELECT * FROM tb_admin1"); // Ambil data dari tabel tb_pelajar
+                include 'config.php'; 
+                $result = $mysqli->query("SELECT * FROM tb_admin1"); // Ambil data dari tabel tb_admin1
                 $i = 1;
                 while ($row = $result->fetch_assoc()) {
                     echo '<tr>';
                     echo '<td>' . $i . '</td>';
                     echo '<td>' .$row['username'] . '</td>';
                     echo '<td>' .$row['password'] . '</td>';
-                    echo '<td><a href="edit.php?id_admin=' . $row['id_admin'] . '"class="btn btn-update">Edit</a></td>';
+                    echo '<td><a href="edit.php?id_admin=' . $row['id_admin'] . '"class="btn btn-edit">Edit</a></td>';
                     echo '<td><a href="hapus_admin.php?id_admin=' . $row['id_admin'] . '"class="btn btn-delete">Hapus</a></td>';
                     echo '</tr>';
                     $i++;

@@ -279,7 +279,7 @@
 			<option value="ENGINEERING">Engineering</option>
 	</div>
 
-  <div class="form-group">
+  <select class="form-group">
       <label for="pendidikan_terakhir">Pendidikan Terakhir:</label>
       <select id="pendidikan_terakhir" name="kirim_pendidikan_terakhir">
         <option value="">Pilih Pendidikan Terakhir</option>
@@ -295,7 +295,7 @@
         <option value="S2">S2</option>
         <option value="S3">S3</option>
       </select>
-    </div>
+    </select>
       
     <div class="form-group">
       <label for="pengalaman_kerja">Pengalaman Kerja:</label>

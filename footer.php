@@ -32,7 +32,7 @@
                 </div>
             </div>
     
-            <!-- Quick Links Section -->
+            <!-- Bagian Tautan Navbar -->
             <div class="footer-section">
                 <h3 class="footer-heading">Menu</h3>
                 <ul class="footer-links">
@@ -45,7 +45,7 @@
                 </ul>
             </div>
     
-            <!-- Contact Info Section -->
+            <!-- Bagian Info Kontak -->
             <div class="footer-section">
                 <h3 class="footer-heading">Kontak & Jam Operasional</h3>
                 <div class="footer-info">
@@ -60,7 +60,7 @@
                 </div>
             </div>
     
-            <!-- Maps Section -->
+            <!-- Bagian Maps -->
             <div class="footer-section">
                 <h3 class="footer-heading">Lokasi Kami</h3>
                 <div class="maps-container">

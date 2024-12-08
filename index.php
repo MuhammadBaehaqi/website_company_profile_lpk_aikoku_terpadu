@@ -25,9 +25,9 @@
   </div>
 </div>
 
-<section class="welcome-section"> <!-- digunakan untuk membagi bagian dalam halaman web -->
+<section class="welcome-section">
   <h2 class="welcome-heading">SELAMAT DATANG</h2> 
-  <div class="welcome-line"></div> <!--  membuat garis di bawah heading "SELAMAT DATANG". -->
+  <div class="welcome-line"></div> <!--  garis di bawah heading "SELAMAT DATANG". -->
   <div class="welcome-content"> 
     <p>LPK Aikoku Terpadu adalah lembaga pelatihan bahasa Jepang yang siap membantumu mewujudkan impian berkarir di
       Jepang dengan program pelatihan berkualitas dan pembelajaran intensif.</p>
@@ -38,10 +38,10 @@
   <div class="cards-container">
     <div class="card">
       <div class="card-icon">
-        <i class="fas fa-graduation-cap"></i> <!-- untuk menampilkan ikon -->
+        <i class="fas fa-graduation-cap"></i> 
       </div>
-      <h3 class="card-title">Pengajar Berpengalaman</h3> <!-- Judul kartu menggunakan heading 3 -->
-      <p class="card-description"> <!-- Paragraf yang berisi deskripsi tentang Pengajar Berpengalaman -->
+      <h3 class="card-title">Pengajar Berpengalaman</h3>
+      <p class="card-description">
         Tim pengajar profesional yang terdiri dari native speaker dan instruktur tersertifikasi, LPK Aikoku Terpadu
         memastikan setiap siswa mendapat pembelajaran berkualitas tinggi. Pengajar kami memiliki pengalaman dalam
         mengajar bahasa Jepang dan siap membantu Anda mencapai kemahiran yang diinginkan.
@@ -49,13 +49,11 @@
     </div>
 
     <div class="card">
-      <!-- Elemen ini adalah satu card (kartu) individual. Kelas card akan memberikan gaya khusus pada setiap kartu, seperti ukuran, warna latar, bayangan, atau batas (border), sehingga setiap kartu memiliki tampilan konsisten. -->
       <div class="card-icon">
-        <!-- Bagian ini adalah container untuk ikon di dalam kartu. Kelas card-icon memberikan gaya khusus pada ikon, seperti ukuran, warna, atau posisi ikon di dalam kartu. -->
         <i class="fas fa-book"></i> <!-- untuk menampilkan ikon -->
       </div>
-      <h3 class="card-title">Pelatihan Yang Singkat</h3> <!-- Judul kartu menggunakan heading 3 -->
-      <p class="card-description"> <!-- Paragraf yang berisi deskripsi tentang Pelatihan Yang singkat -->
+      <h3 class="card-title">Pelatihan Yang Singkat</h3> 
+      <p class="card-description"> 
         Kami menawarkan program pelatihan yang efektif dan singkat, dirancang untuk mempersiapkan Anda dalam waktu
         singkat. Kurikulum kami mengikuti standar JLPT (Japanese Language Proficiency Test), dengan fokus pada
         kemampuan praktis yang mendukung kesiapan kerja.
@@ -74,13 +72,11 @@
     </div>
 
     <div class="card">
-      <!-- Elemen ini adalah satu card (kartu) individual. Kelas card akan memberikan gaya khusus pada setiap kartu, seperti ukuran, warna latar, bayangan, atau batas (border), sehingga setiap kartu memiliki tampilan konsisten. -->
       <div class="card-icon">
-        <!-- Bagian ini adalah container untuk ikon di dalam kartu. Kelas card-icon memberikan gaya khusus pada ikon, seperti ukuran, warna, atau posisi ikon di dalam kartu. -->
         <i class="fa-regular fa-money-bill-1"></i> <!-- untuk menampilkan ikon -->
       </div>
-      <h3 class="card-title">Biaya Terjangkau</h3> <!-- Judul kartu menggunakan heading 3 -->
-      <p class="card-description"> <!-- Paragraf yang berisi deskripsi tentang biaya -->
+      <h3 class="card-title">Biaya Terjangkau</h3> 
+      <p class="card-description">
         Kami percaya bahwa pendidikan berkualitas tidak harus mahal. LPK Aikoku Terpadu menawarkan program berkualitas
         dengan biaya yang kompetitif dan pelatihan yang terjangkau.Biaya sudah termasuk materi pembelajaran,
         konsultasi karir, dan akses ke fasilitas belajar. Kami juga menyediakan opsi pembayaran cicilan untuk
@@ -90,70 +86,65 @@
   </div>
 
   <!-- Fasilitas -->
-  <h2 class="fasilitas-heading">Fasilitas</h2> <!-- heading level 2 untuk menampilkan nama fasilitas -->
-  <div class="facilities-container"> <!-- Container utama yang menampung semua kartu fasilitas -->
-    <div class="facility-card"> <!-- Kartu individual yang berisi informasi tentang satu fasilitas -->
+  <h2 class="fasilitas-heading">Fasilitas</h2> 
+  <div class="facilities-container"> 
+    <div class="facility-card"> 
       <!-- Bagian ikon -->
       <div class="facility-icon">
         <i class="fas fa-home"></i>
       </div>
       <!-- Bagian Judul -->
       <h3 class="facility-title">Asrama</h3>
-      <!-- Bagian deskripsi -->
       <p class="facility-description">
         Asrama nyaman dan bersih dengan fasilitas lengkap untuk mendukung proses belajar. Lokasi strategis dan
         lingkungan yang kondusif untuk belajar bahasa Jepang.
       </p>
     </div>
 
-    <div class="facility-card"> <!-- Kartu individual yang berisi informasi tentang satu fasilitas -->
+    <div class="facility-card"> 
       <!-- Bagian ikon -->
       <div class="facility-icon">
         <i class="fas fa-wifi"></i>
       </div>
       <!-- Bagian Judul -->
       <h3 class="facility-title">Wifi</h3>
-      <!-- Bagian deskripsi -->
       <p class="facility-description">
         Koneksi internet cepat dan stabil tersedia 24 jam untuk mendukung pembelajaran online dan akses materi digital.
       </p>
     </div>
 
-    <div class="facility-card"> <!-- Kartu individual yang berisi informasi tentang satu fasilitas -->
+    <div class="facility-card"> 
       <!-- Bagian ikon -->
       <div class="facility-icon">
         <i class="fas fa-book"></i>
       </div>
       <!-- Bagian Judul -->
       <h3 class="facility-title">Modul</h3>
-      <!-- Bagian deskripsi -->
       <p class="facility-description">
         Modul pembelajaran komprehensif dan terstruktur sesuai standar JLPT, dilengkapi dengan latihan dan evaluasi
         berkala.
       </p>
     </div>
 
-    <div class="facility-card"> <!-- Kartu individual yang berisi informasi tentang satu fasilitas -->
+    <div class="facility-card"> 
       <!-- Bagian ikon -->
       <div class="facility-icon">
         <i class="fas fa-tshirt"></i>
       </div>
       <!-- Bagian Judul -->
       <h3 class="facility-title">Kaos</h3>
-      <!-- Bagian deskripsi -->
       <p class="facility-description">
         Seragam kaos dengan desain eksklusif untuk menciptakan identitas dan kebersamaan dalam komunitas belajar.
       </p>
     </div>
 
-    <div class="facility-card"> <!-- Kartu individual yang berisi informasi tentang satu fasilitas -->
+    <div class="facility-card"> 
       <!-- Bagian ikon -->
       <div class="facility-icon">
         <i class="fas fa-desktop"></i>
       </div>
       <!-- Bagian Judul -->
       <h3 class="facility-title">Ruang Komputer</h3>
-      <!-- Bagian deskripsi -->
       <p class="facility-description">
         Laboratorium komputer modern dengan software pembelajaran bahasa Jepang terkini untuk praktik dan latihan
         mandiri.

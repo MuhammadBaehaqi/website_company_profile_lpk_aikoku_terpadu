@@ -14,7 +14,6 @@
 <body>
     <div id="contact">
         <?php include('navbar.php'); ?>
-    
     <div class="container-contact">
         <!-- <img src="img/contact.png" alt="LPK Aikoku Terpadu Interior" class="hero-image"> -->
         <div class="contact-text">
@@ -77,8 +76,7 @@ dalam layout grid. -->
         </div>
 
         <div class="map-container">
-            <!-- Ganti src dengan URL Google Maps yang sesuai -->
-            <!-- allowfullscreen: Mengizinkan peta untuk ditampilkan dalam mode layar penuh. -->
+            <!-- allowfullscreen: untuk ditampilkan dalam mode layar penuh. -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.4110305641657!2d108.97572757419275!3d-6.912507667651758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fa5af84c2ae8d%3A0x6d0eb4890eba578f!2sLPK%20AIKOKU%20TERPADU!5e1!3m2!1sid!2sid!4v1730649739920!5m2!1sid!2sid" allowfullscreen></iframe>
         </div>
     </div>
