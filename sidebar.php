@@ -82,8 +82,10 @@
     </div>
     <ul class="sidebar-menu">
         <li><a href="db_admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="data_akun.php"><i class="fas fa-users"></i> Akun</a></li>
         <li><a href="data_pengguna.php"><i class="fas fa-users"></i> Data Pengguna</a></li>
         <li><a href="data_regis.php"><i class="fas fa-user-plus"></i> Registrasi</a></li>
+        <li><a href="data_contact.php"><i class="fa-regular fa-comment-dots"></i> Pesan</a></li>
         <li><a href="settings.php"><i class="fas fa-cog"></i> Settings</a></li>
         <li><a href="log_out.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
     </ul>

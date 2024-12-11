@@ -15,7 +15,7 @@
   <!-- Navbar -->
   <?php include('navbar.php'); ?>
   <div class="header-text">
-     
+    <h1>LPK AIKOKU TERPADU <br>愛国テレパデｳ</h1> 
     <p>Pusat Pelatihan Bahasa Jepang Terbaik untuk Mewujudkan </p> 
     <p>Impian Berkarir Di Jepang Bersama LPK Aikoku Terpadu</p> 
   </div>

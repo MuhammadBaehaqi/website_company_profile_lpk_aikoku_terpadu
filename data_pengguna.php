@@ -66,7 +66,8 @@ table {
 }
 
 table thead {
-    background-color: #f2f2f2;
+    background-color:  #28a745;
+    color: white;
 }
 
 table th, table td {
@@ -80,8 +81,13 @@ table tr:nth-child(even) {
     background-color: #f9f9f9; 
 }
 
-table tr:hover {
+table tr:hover{
     background-color: #f5f5f5;
+
+}
+table thead tr:hover {
+    background-color: #218838 ;
+    
 }
 /* Buttons */
 .btn {
@@ -140,11 +146,17 @@ table tr:hover {
 </style>
 </head>
 <div class="main-content">
+    <?php
+    if ($_SESSION['role'] === 'staff') {
+    echo "Anda tidak berhak mengakses halaman ini.";
+    exit();
+}
+?>
         <?php
-        if ($_SESSION['role'] !== 'admin') {
-            echo "Anda tidak berhak mengakses halaman ini.";
-            exit;
-        }
+if ($_SESSION['role'] === 'user') {
+    echo "Anda tidak berhak mengakses halaman ini.";
+    exit();
+}
         ?>
         <div class="container">
             <div class="controls">
@@ -166,8 +178,8 @@ table tr:hover {
                         <th>Id</th>
                         <th>Username</th>
                         <th>Password</th>
-                        <th>Aksi</th>
-                        <th></th>
+                        <th>Edit</th>
+                        <th>Hapus</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -181,7 +193,7 @@ table tr:hover {
                     echo '<td>' .$row['username'] . '</td>';
                     echo '<td>' .$row['password'] . '</td>';
                     echo '<td><a href="edit.php?id_admin=' . $row['id_admin'] . '"class="btn btn-edit">Edit</a></td>';
-                    echo '<td><a href="hapus_admin.php?id_admin=' . $row['id_admin'] . '"class="btn btn-delete">Hapus</a></td>';
+                    echo '<td><a href="hapus_admin.php?id_admin=' . $row['id_admin'] . '" class="btn btn-delete" onclick="return confirm(\'Yakin ingin menghapus?\');">Hapus</a></td>';
                     echo '</tr>';
                     $i++;
                 }

@@ -130,14 +130,13 @@ include 'sidebar.php';
 </head>
     
 
-<div class="main-content">
+<div class="main-content">   
     <?php
-        if ($_SESSION['role'] !== 'user') {
-            echo "Gaboleh masuk.";
-            exit;
-        }
-        ?>
-    
+if ($_SESSION['role'] === 'user') {
+    echo "Anda tidak berhak mengakses halaman ini.";
+    exit();
+}
+    ?>
      <div class="table-container">
         <h2>Data Registration</h2>
         <div class="table-scroll-wrapper">
@@ -181,7 +180,7 @@ include 'sidebar.php';
                     echo '<td>' .$row['alamat'] . '</td>';
                     echo '<td>' .$row['alamat_keluarga'] . '</td>';
                     echo '<td><a href="update.php?id_regis=' . $row['id_regis'] . '"class="btn btn-update">Update</a></td>';
-                    echo '<td><a href="hapus.php?id_regis=' . $row['id_regis'] . '"class="btn btn-delete">Hapus</a></td>';
+                    echo '<td><a href="hapus.php?id_regis=' . $row['id_regis'] . '" class="btn btn-delete" onclick="return confirm(\'Yakin ingin menghapus?\');">Hapus</a></td>';
                     echo '</tr>';
                     $i++;
                 }

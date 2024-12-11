@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendaftaran</title>
-    <link rel="stylesheet" href="style.css">
+
     <link rel="Icon" href="img/logo.png" type="image/x-Icon">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -279,7 +279,7 @@
 			<option value="ENGINEERING">Engineering</option>
 	</div>
 
-  <select class="form-group">
+  <div class="form-group">
       <label for="pendidikan_terakhir">Pendidikan Terakhir:</label>
       <select id="pendidikan_terakhir" name="kirim_pendidikan_terakhir">
         <option value="">Pilih Pendidikan Terakhir</option>
@@ -295,7 +295,7 @@
         <option value="S2">S2</option>
         <option value="S3">S3</option>
       </select>
-    </select>
+</div>
       
     <div class="form-group">
       <label for="pengalaman_kerja">Pengalaman Kerja:</label>

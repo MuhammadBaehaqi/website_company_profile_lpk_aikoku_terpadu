@@ -1238,6 +1238,14 @@ textarea: Memberikan kemampuan untuk merubah ukuran vertikal */
   .contact-grid {
     grid-template-columns: 1fr; /* Pada ukuran layar ini, grid-template-columns diatur menjadi 1fr, untuk tata letak yang lebih baik pada layar kecil */
   }
+
+    .container-contact h1 {
+        font-size: 2em;
+    }
+
+    .container-contact p {
+        font-size: 1em;
+    }
 }
 /* end styling contact */
 

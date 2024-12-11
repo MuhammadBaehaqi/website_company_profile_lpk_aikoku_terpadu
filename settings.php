@@ -13,179 +13,229 @@ include 'sidebar.php';
     font-family: Arial, sans-serif;
 }
 
-/* Dashboard Header */
-.dashboard-header {
-    margin-bottom: 20px;
-    text-align: center;
-}
-.dashboard-title {
-    font-size: 2rem;
-    color: #2c3e50;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-}
-.dashboard-header p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin: 10px 0 0;
-}
-
-/* Stats Container */
-.stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
-}
-.stat-card {
-    background-color: #3498db;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.stat-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.stat-card .number {
-    font-size: 2rem;
-    font-weight: bold;
-}
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Recent Activity */
-.recent-activity {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.recent-activity h2 {
-    margin: 0 0 15px;
-    font-size: 1.5rem;
-    color: #2c3e50;
-}
-.activity-list {
-    list-style: none;
     padding: 0;
-    margin: 0;
+    background-color: #f4f4f4;
 }
-.activity-item {
-    padding: 10px;
+
+.main-content {
+    padding: 20px;
     background-color: #fff;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    color: #34495e;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
 }
-.activity-item:hover {
-    background-color: #dcdde1;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Section Styling */
+.add-form, .form-list {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input, select {
+    width: 80%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button.edit-btn, button.delete-btn {
+    padding: 5px 10px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.edit-btn {
+    background-color:#4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+
+button.edit-btn:hover {
+    background-color: #45a049;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: #d32f2f;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Atur ulang ukuran sidebar */
+    }
+    .main-content, .container {
+        margin-left: 100px; /* Sesuaikan dengan sidebar lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px; /* Sidebar minimal untuk layar kecil */
+    }
+    .main-content, .container {
+        margin-left: 100px; /* Sesuaikan dengan lebar minimal sidebar */
+    }
 }
 
 </style>
 </head>
-<div class="main-content">
+<body>
+   <div class="main-content">
+    <div class="container">
+        <header>
+            <h1>Form Settings</h1>
+        </header>
 
+        <!-- Form for adding new field -->
+        <section class="add-form">
+            <h2>Tambah Form</h2>
+            <form>
+                <label for="field_name">Nama Bidang :</label>
+                <input type="text" id="field_name" name="field_name" required><br>
 
-</div>
-     <!-- <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
+                <label for="field_type">Type Bidang :</label>
+                <select id="field_type" name="field_type" required>
+                    <option value="text">Text</option>
+                    <option value="select">Select</option>
+                    <option value="textarea">Textarea</option>
+                </select><br>
 
-   .main-content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+                <label for="options">Opsi (jika ada, untuk Pilih):</label>
+                <input type="text" id="options" name="options"><br>
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 30px;
-    }
+                <button type="submit">Tambah</button>
+            </form>
+        </section>
 
-    th, td {
-      padding: 10px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    .btn-container {
-      text-align: right;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #45a049;
-    }
-  </style>
-
- <div class="main-content">
-            <h1>Admin Settings</h1>
-    <div class="btn-container">
-      <button class="btn">Tambah Registrasi</button>
+        <!-- Table yang sudah ada -->
+        <section class="form-list">
+            <h2>Formulir Sekarang</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Bidang</th>
+                        <th>Tipe Bidang</th>
+                        <th>Opsi</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nama Lengkap</td>
+                        <td>Text</td>
+                        <td>-</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>Select</td>
+                        <td>Male, Female</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>Textarea</td>
+                        <td>-</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Registration Date</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>John Doe</td>
-          <td>john.doe@example.com</td>
-          <td>2023-04-15</td>
-          <td>
-            <a href="#">Edit</a>
-            <a href="#">Delete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jane Smith</td>
-          <td>jane.smith@example.com</td>
-          <td>2023-05-01</td>
-          <td>
-            <a href="#">Edit</a>
-            <a href="#">Delete</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
+    </div>
+</body>
+</html>

@@ -19,8 +19,8 @@ Alamat: <input type="text" name="alamat2" value='<?php echo $hasil['alamat']?>'>
 Alamat Keluarga: <input type="text" name="alamatkeluarga2" value='<?php echo $hasil['alamat']?>'><br>
 <input type="submit">
 </form>
-<?php
 
+<?php
 if(!empty($_POST)){
     $id_regis = $_POST['id2'];
     $a = $_POST['nama2'];
