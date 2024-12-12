@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2024 at 03:01 AM
+-- Generation Time: Dec 12, 2024 at 05:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -30,18 +30,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `tb_admin1` (
   `id_admin` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `email_admin` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `roles` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_admin1`
 --
 
-INSERT INTO `tb_admin1` (`id_admin`, `username`, `password`) VALUES
-(1, 'Imam Joharudin', 'beeccdb438355c029a66dbec333fa1c8'),
-(2, 'Ali Chamdan', '984d8144fa08bfc637d2825463e184fa'),
-(3, 'Octa Hidayat', 'ba0991843e85f54379110756eea93ed7'),
-(5, 'haki', '8e0cdbc8beefb35843dd2e835c5eee03');
+INSERT INTO `tb_admin1` (`id_admin`, `username`, `email_admin`, `password`, `roles`) VALUES
+(1, 'Imam Joharudin', 'muhammadbaehaqi12@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'admin\r\n'),
+(2, 'Ali Chamdan', 'muhammadbaehaqi12@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'admin'),
+(3, 'Octa Hidayat', '', 'ba0991843e85f54379110756eea93ed7', 'staff'),
+(5, 'haki', '', '8e0cdbc8beefb35843dd2e835c5eee03', 'user');
 
 -- --------------------------------------------------------
 
@@ -63,8 +65,30 @@ CREATE TABLE `tb_contact` (
 --
 
 INSERT INTO `tb_contact` (`id_contact`, `nama_contact`, `no_contact`, `email_contact`, `alamat_contact`, `pesan_contact`) VALUES
-(1, 'haki', 12312, 'sadfqw3@ed', '', ''),
-(2, 'haki', 12312222, 'sadfqw3@eddddddd', 'awedas1221', 'qqqqqqqq');
+(1, 'haki', 12312, 'sadfqw3@ed', 'dhd', 'saya ingin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_galeri`
+--
+
+CREATE TABLE `tb_galeri` (
+  `id_galeri` int(11) NOT NULL,
+  `foto_galeri` varchar(900) NOT NULL,
+  `keterangan` varchar(500) NOT NULL,
+  `upload_date` varchar(500) NOT NULL,
+  `detail` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_galeri`
+--
+
+INSERT INTO `tb_galeri` (`id_galeri`, `foto_galeri`, `keterangan`, `upload_date`, `detail`) VALUES
+(5, 'uploads/jpng.jpg', 'Fuji\r\n', '2024-12-12 17:14:52', ''),
+(6, 'uploads/Fujiyama.jpg', 'fuji', '2024-12-12 17:23:46', ''),
+(7, 'uploads/lpk.jpg', 'logo', '2024-12-12 17:25:52', '');
 
 -- --------------------------------------------------------
 
@@ -105,11 +129,18 @@ CREATE TABLE `tb_pelajar` (
 --
 
 INSERT INTO `tb_pelajar` (`id_regis`, `Nama_lengkap`, `TTL`, `tanggal_lahir`, `usia`, `Agama`, `alamat_ktp`, `Jenis_Kelamin`, `hobi`, `no_telepon`, `alamat`, `alamat_keluarga`, `telepon_keluarga`, `alamat_email`, `bidang`, `pendidikan_terakhir`, `pengalaman_kerja`, `status_pernikahan`, `tinggi_badan`, `berat_badan`, `buta_warna`, `kesehatan`, `penyakit_kronis`, `golongan_darah`, `kewarganegaraan`) VALUES
-(31, 'Hakihoki', 'petunjungan', '2004-05-04', '18', 'islam', 'BREBES', 'Laki-Laki', '', '085875962872', 'Petunjungan', 'Petunjungan', '', 'BREBES@gmail.com', '', '', '', '', '', '', '', '', '', '', ''),
-(34, 'zz', 'tegal', '2005-02-16', '19', 'Kristen', '', 'Perempuan', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(35, 'AAN', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(36, 'dimas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(37, 'ali', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(31, 'Hakihoki', 'petunjungan', '2004-05-04', '90', 'islam', 'BREBES', 'Laki-Laki', '', '085875962872', 'dqewuigdg', 'Petunjungan', '', 'BREBES@gmail.com', '', '', '', '', '', '', '', '', '', '', ''),
+(34, 'zz', 'tegal', '2005-02-16', '19', 'Kristen', 'dqw', 'Perempuan', '', 'ef', 'Petunjungan', 'd3eqwd', '', 'ddddddd@rf', '', '', '', '', '', '', '', '', '', '', ''),
+(35, 'AAN', 'dw', '', 'ddddddwq32', '', 'dw', '', '', 'dqwqr33', '', 'q32rfdd', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(38, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(39, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ef'),
+(40, '', '', '', 'dw', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(41, '', '13wed', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(42, '', '13wed', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(43, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'wda'),
+(44, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'few'),
+(45, ';p', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ht'),
+(46, 'vv', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'b');
 
 --
 -- Indexes for dumped tables
@@ -127,6 +158,12 @@ ALTER TABLE `tb_admin1`
 --
 ALTER TABLE `tb_contact`
   ADD PRIMARY KEY (`id_contact`);
+
+--
+-- Indexes for table `tb_galeri`
+--
+ALTER TABLE `tb_galeri`
+  ADD PRIMARY KEY (`id_galeri`);
 
 --
 -- Indexes for table `tb_pelajar`
@@ -148,13 +185,19 @@ ALTER TABLE `tb_admin1`
 -- AUTO_INCREMENT for table `tb_contact`
 --
 ALTER TABLE `tb_contact`
-  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tb_galeri`
+--
+ALTER TABLE `tb_galeri`
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_pelajar`
 --
 ALTER TABLE `tb_pelajar`
-  MODIFY `id_regis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_regis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

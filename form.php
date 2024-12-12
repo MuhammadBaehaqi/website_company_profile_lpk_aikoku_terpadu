@@ -346,7 +346,7 @@
 </div>
 <div class="form-group">
 <label for="kewarganegaraan">Kewarganegaraan:</label>
-			<input type="text" id="kewarganegaraan" name="kirim_kewarganegaraan" required>
+			<input type="text" id="kewarganegaraan" name="kirim_kewarganegaraan">
 </div>
 
     <button type="submit" name="kirimdata" class="btn btn-primary">Kirim Pendaftaran</button>
