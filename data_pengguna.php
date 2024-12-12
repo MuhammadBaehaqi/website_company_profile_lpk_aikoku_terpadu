@@ -177,7 +177,8 @@ if ($_SESSION['role'] === 'user') {
                     <tr>
                         <th>Id</th>
                         <th>Username</th>
-                        <th>Password</th>
+                        <th>Email</th>
+                        
                         <th>Edit</th>
                         <th>Hapus</th>
                     </tr>
@@ -191,7 +192,8 @@ if ($_SESSION['role'] === 'user') {
                     echo '<tr>';
                     echo '<td>' . $i . '</td>';
                     echo '<td>' .$row['username'] . '</td>';
-                    echo '<td>' .$row['password'] . '</td>';
+                    echo '<td>' .$row['email_admin'] . '</td>';
+                    
                     echo '<td><a href="edit.php?id_admin=' . $row['id_admin'] . '"class="btn btn-edit">Edit</a></td>';
                     echo '<td><a href="hapus_admin.php?id_admin=' . $row['id_admin'] . '" class="btn btn-delete" onclick="return confirm(\'Yakin ingin menghapus?\');">Hapus</a></td>';
                     echo '</tr>';

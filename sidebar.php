@@ -86,6 +86,7 @@
         <li><a href="data_pengguna.php"><i class="fas fa-users"></i> Data Pengguna</a></li>
         <li><a href="data_regis.php"><i class="fas fa-user-plus"></i> Registrasi</a></li>
         <li><a href="data_contact.php"><i class="fa-regular fa-comment-dots"></i> Pesan</a></li>
+        <li><a href="galeri_admin.php"><i class="fa-solid fa-image"></i> Galleri</a></li>
         <li><a href="settings.php"><i class="fas fa-cog"></i> Settings</a></li>
         <li><a href="log_out.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
     </ul>

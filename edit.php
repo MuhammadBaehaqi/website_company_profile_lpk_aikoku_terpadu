@@ -35,7 +35,7 @@ $hasil = $dataadmin->fetch_assoc();
             font-size: 14px;
             color: #555;
         }
-        input[type="text"], input[type="hidden"], input[type="password"] {
+        input[type="text"], input[type="hidden"], input[type="email"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -68,9 +68,9 @@ $hasil = $dataadmin->fetch_assoc();
             <input type="hidden" name="id1" value="<?php echo $hasil['id_admin']; ?>">
             <label for="username">Username:</label>
             <input type="text" id="username" name="nama1" value="<?php echo $hasil['username']; ?>" required>
-            
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password1" value="<?php echo $hasil['password']; ?>" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="emailadmin1" value="<?php echo $hasil['email_admin']; ?>" required>
+
             
             <input type="submit" value="Update">
         </form>
@@ -82,8 +82,9 @@ $hasil = $dataadmin->fetch_assoc();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_admin = $_POST['id1'];
     $user = $_POST['nama1'];
+    $emailadmin = $_POST['emailadmin1'];
     $pw = md5($_POST['password1']); // Hash password sebelum disimpan
-    $updt = $mysqli->query("UPDATE tb_admin1 SET username='$user', password='$pw' WHERE id_admin='$id_admin'");
+    $updt = $mysqli->query("UPDATE tb_admin1 SET username='$user', email_admin='$emailadmin', password='$pw' WHERE id_admin='$id_admin'");
     if ($updt === TRUE) {
         header('Location: data_pengguna.php');
     } else {

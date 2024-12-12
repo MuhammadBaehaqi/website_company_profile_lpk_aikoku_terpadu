@@ -34,11 +34,14 @@ if (isset($_POST['kirimdata'])) {
 $query = "INSERT INTO tb_pelajar (Nama_lengkap, TTL, tanggal_lahir, usia, Jenis_Kelamin, hobi, Agama, alamat_ktp, alamat_email, no_telepon,  alamat, alamat_keluarga, telepon_keluarga, bidang, pendidikan_terakhir, pengalaman_kerja, status_pernikahan, tinggi_badan, berat_badan, buta_warna, kesehatan, penyakit_kronis, golongan_darah, kewarganegaraan) 
 VALUES ('$Nama', '$TTL', '$tanggal_lahir', '$usia', '$jenis_kelamin', '$hobi', '$Agama', '$alamat_ktp', '$alamat_email', '$no_telepon',  '$alamat', '$alamat_keluarga', '$telepon_keluarga', '$bidang', '$pendidikan_terakhir', '$pengalaman_kerja', '$status_pernikahan', '$tinggi_badan', '$berat_badan', '$buta_warna', '$kesehatan', '$penyakit_kronis', '$golongan_darah', '$kewarganegaraan')";
     if (mysqli_query($koneksi, $query)) {
-        // Redirect ke halaman home setelah berhasil
-        header("Location: index.php");
+        // Redirect ke halaman home dengan pemberitahuan sukses
+ echo "<script>alert('Pendaftaran telah dikirim, mohon tunggu pesan dari admin.'); window.location.href='index.php';</script>";
         exit;
-    } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
+     } else {
+        // Jika gagal
+        echo "<script>
+        alert('Pendaftaran gagal. Silakan coba lagi.'); window.location.href='form_pendaftaran.php';
+        </script>";
     }
 }
 
