@@ -1,6 +1,8 @@
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,11 @@
   <link rel="Icon" href="img/logo.png" type="image/x-Icon">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    </style>
 </head>
 <body>
   <div id="header">
@@ -153,30 +160,7 @@
   </div>
 </section>
 
-<div class="testimonial-container">
-  <div class="title-wrapper">
-    <div class="decorative-line"></div>
-    <h2 class="title">Testimoni Alumni<br><span class="title-second-line">Lpk Aikoku Terpadu</span></h2>
-    <div class="decorative-line"></div>
-  </div>
-
-  <div class="testimonial-content">
-    <p class="testimonial-text">
-      "Alhamdulillah saya sangat bersyukur dan bangga menjadi bagian dari LPK Aikoku Terpadu, salah satu pelatihan untuk
-      mewujudkan mimpi teman2 yg ingin kejepang. Pada awal masuk ke lpk aikoku terpadu saya sama sekali tidak tahu
-      tentang bahasa dan budaya2 jepang, berkat suasana belajar yg nyaman dan fasilitas yg mendukung serta temen2 dan
-      sensei tachi yg sangat luar biasa, saya mendapat banyak ilmu tentang negara jepang, hinga sekarang saya bisa
-      sampai dan menerapkan ilmu tersebut untuk bekerja dan tinggal dijepang."
-    </p>
-    <div class="testimonial-author">
-      <img src="img/random.jpg" alt="Anis" class="author-image">
-      <div class="author-info">
-        <h4 class="author-name">Anis</h4>
-        <p class="author-position">Tokutei Ginou Kaigo</p>
-      </div>
-    </div>
-  </div>
-</div>
+<?php include 'testimoni.php';?>
 
 <?php include 'footer.php'; ?>
 </body>

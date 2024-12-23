@@ -10,7 +10,8 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-image: url('https://niindo.com/wp-content/uploads/2018/01/Ingin-Menikmati-Keindahan-Bunga-Sakura-Saat-Berlibur-Ke-Jepang-Simak-Perkiraan-Tanggalnya.jpg');
+            background-image: url('img/foto_login.jpg'); 
+            /* backrgound ini belum kebaca */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -42,7 +43,7 @@
 }
 
 .login-container {
-    background: rgba(255, 255, 255, 0.95);  
+     background: rgba(255, 255, 255, 0.6); /* Lebih transparan */
     padding: 40px; /* Jarak dalam container */
     border-radius: 10px; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -75,7 +76,7 @@
         }
 
         .login-header h1 {
-            color: #333;
+            color: #000;
             font-size: 2em;
             margin-bottom: 10px;
         }
@@ -88,22 +89,18 @@
 
         .form-group {
             position: relative;
+            margin-bottom:5px;
         }
 
         .form-group input {
             width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd; /* Garis tepi */
+            padding: 15px 10px ; /* Tambahkan ruang di atas */
+            border: 1px solid #ccc; /* Garis tepi */
             border-radius: 5px;
             font-size: 16px;
+            outline: none;
             transition: border-color 0.3s ease;
             background: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Efek fokus input */
-        .form-group input:focus {
-            border-color: #2980b9;
-            outline: none; /* Menghilangkan outline */
         }
 
         /* Mengatur label input */
@@ -116,14 +113,16 @@
             transition: all 0.3s ease;
             pointer-events: none;  /* Menonaktifkan interaksi mouse */
             font-size: 16px;
+            padding: 0 5px; /* Tambahkan padding agar label tidak menempel */
         }
 
-        /* Efek floating label */
+        /* Efek label  */
         .form-group input:focus + label,
         .form-group input:not(:placeholder-shown) + label {
-            top: 0;
+            top: -10px; /* Geser lebih ke atas */
             font-size: 12px;
-            background: white;
+            background:;
+            color: #000;
             padding: 0 5px;
         }
 

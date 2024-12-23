@@ -10,7 +10,9 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>/* Contact Container */
-
+ html {
+        scroll-behavior: smooth;
+    }
 
 </style>
 </head>
@@ -36,7 +38,8 @@ dalam layout grid. -->
         <div class="contact-grid">
             <div class="contact-form">
                 <h2>Kirim Pesan</h2>
-                <form action="proses_contact.php" method="post">
+                <form action="/BCK/admin/pesan/proses_contact.php" method="post">
+
                     <div class="form-group">
                         <label for="name">Nama Lengkap</label>
                         <input type="text" id="name" name="kirim_name" required>

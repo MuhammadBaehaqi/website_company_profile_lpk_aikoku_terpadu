@@ -4,23 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendaftaran</title>
-
+<link rel="stylesheet" href="style.css">
     <link rel="Icon" href="img/logo.png" type="image/x-Icon">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
             <!-- Navbar -->
              <?php include('navbar.php'); ?>
-        </div>
-		<section class="form">
-      <div class="hero-content">
-        <h1>LPK AIKOKU TERPADU</h1>
-        <p>Form Pendaftaran</p>
-      </div>
-    </section>
-	
+
         <!-- <div class="container">
 		<h2>Formulir Pendaftaran</h2>
 		<form action="proses_pendaftaran.php" method="post">
@@ -188,66 +180,71 @@
 			<!-- <input type="submit" name ="kirimdata" value="Kirim Pendaftaran">
 		</form>
 		</div> -->
-
-		<div class="container">
+<section class="form">
+      <div class="hero-content">
+        <h1>LPK AIKOKU TERPADU</h1>
+        <p>Form Pendaftaran</p>
+      </div>
+    </section>
+<div class="container">
   <h2>Formulir Pendaftaran</h2>
-  <form action="proses_pendaftaran.php" method="post">
-    <div class="form-group">
-      <label for="nama_lengkap">Nama Lengkap:</label>
-      <input type="text" id="nama_lengkap" name="kirim_nama" >
-    </div>
+	<form action="/BCK/admin/registrasi/proses_pendaftaran.php" method="post">
+		<div class="form-group">
+      		<label for="nama_lengkap">Nama Lengkap:</label>
+      		<input type="text" id="nama_lengkap" name="kirim_nama" >
+    	</div>
 
-    <div class="form-group">
-      <label for="tempat_lahir">Tempat Lahir:</label>
-      <input type="text" id="tempat_lahir" name="kirim_ttl" >
-    </div>
+    	<div class="form-group">
+      		<label for="tempat_lahir">Tempat Lahir:</label>
+      		<input type="text" id="tempat_lahir" name="kirim_ttl" >
+    	</div>
 
-    <div class="form-group">
-      <label for="tanggal_lahir">Tanggal Lahir:</label>
-      <input type="date" id="tanggal_lahir" name="kirim_tanggal_lahir" >
-    </div>
+    	<div class="form-group">
+      		<label for="tanggal_lahir">Tanggal Lahir:</label>
+			<input type="date" id="tanggal_lahir" name="kirim_tanggal_lahir" >
+    	</div>
 
         <div class="form-group">
-      <label for="usia">Usia:</label>
+      		<label for="usia">Usia:</label>
 			<input type="text" id="usia" name="kirim_usia">
-    </div>
+    	</div>
 
-    <div class="form-group">
-      <label for="jenis_kelamin">Jenis Kelamin:</label>
-      <select id="jenis_kelamin" name="jenis_kelamin">
-        <option value="">Pilih Jenis Kelamin</option>
-        <option value="Laki-laki">Laki-laki</option>
-        <option value="Perempuan">Perempuan</option>
-      </select>
-    </div>
+    	<div class="form-group">
+			<label for="jenis_kelamin">Jenis Kelamin:</label>
+			<select id="jenis_kelamin" name="jenis_kelamin">
+				<option value="">Pilih Jenis Kelamin</option>
+				<option value="Laki-laki">Laki-laki</option>
+				<option value="Perempuan">Perempuan</option>
+			</select>
+    	</div>
 
-    <div class="form-group">
-      <label for="hobi">Hobi:</label>
+		<div class="form-group">
+			<label for="hobi">Hobi:</label>
 			<input type="text" id="hobi" name="kirim_hobi">
-    </div>
+		</div>
 
-    <div class="form-group">
-      <label for="agama">Agama:</label>
-      <select id="agama" name="kirim_agama">
-        <option value="">Pilih Agama</option>
-        <option value="Islam">Islam</option>
-        <option value="Kristen">Kristen</option>
-        <option value="Katolik">Katolik</option>
-        <option value="Hindu">Hindu</option>
-        <option value="Buddha">Buddha</option>
-        <option value="Konghucu">Konghucu</option>
-      </select>
-    </div>
+		<div class="form-group">
+		<label for="agama">Agama:</label>
+		<select id="agama" name="kirim_agama">
+			<option value="">Pilih Agama</option>
+			<option value="Islam">Islam</option>
+			<option value="Kristen">Kristen</option>
+			<option value="Katolik">Katolik</option>
+			<option value="Hindu">Hindu</option>
+			<option value="Buddha">Buddha</option>
+			<option value="Konghucu">Konghucu</option>
+		</select>
+		</div>
 
-    <div class="form-group">
-      <label for="alamat_ktp">Alamat KTP</label>
-      <input type="text" id="alamat_ktp" name="kirim_alamat_ktp">
-    </div>
+		<div class="form-group">
+			<label for="alamat_ktp">Alamat KTP</label>
+			<input type="text" id="alamat_ktp" name="kirim_alamat_ktp">
+		</div>
     
-    <div class="form-group">
-      <label for="email">Alamat Email:</label>
-      <input type="email" id="email" name="alamat_email">
-    </div>
+		<div class="form-group">
+			<label for="email">Alamat Email:</label>
+			<input type="email" id="email" name="alamat_email">
+		</div>
 
     <div class="form-group">
       <label for="telepon">No.Telepon/WhatsApp:</label>
@@ -277,6 +274,7 @@
 			<option value="MAGANG">Magang</option>
 			<option value="TOKUTEI_GINOU">Tokutei Ginou</option>
 			<option value="ENGINEERING">Engineering</option>
+		</select>
 	</div>
 
   <div class="form-group">

@@ -3,7 +3,7 @@ session_start();
 require 'config.php';
 
 if (isset($_SESSION['username'])) {
-    header("Location: db_admin.php");
+    header("Location: admin/dashboard/db_admin.php");
     exit();
 }
 
@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = md5($_POST['get_password']); // Hashing password dengan MD5
 
     // Query menggunakan prepared statement
-    //s itu string ,ss itu menunjukan kedua variabel atau parameter $username dan $password
     $stmt = $mysqli->prepare("SELECT * FROM tb_admin1 WHERE username = ? AND password = ?");
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
@@ -24,13 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $data_session = $result->fetch_assoc();
         $_SESSION['username'] = $username;
         $_SESSION['role'] = $data_session['roles'];
-        header("Location: db_admin.php");
+
+        // Pengalihan ke halaman dashboard yang benar
+        header("Location: admin/dashboard/db_admin.php");
+        exit();
     } else {
         $error = "Username atau password salah.";
     }
     $stmt->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

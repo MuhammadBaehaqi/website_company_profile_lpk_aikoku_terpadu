@@ -9,6 +9,40 @@
     <link rel="Icon" href="img/logo.png" type="image/x-Icon">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .headmaster-section {
+    margin-top: 30px;
+}
+
+.headmaster-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00b300;
+    margin-bottom: 15px;
+}
+
+.headmaster-content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.headmaster-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.headmaster-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+    html {
+        scroll-behavior: smooth;
+    }
+    </style>
 </head>
 
 <body>
@@ -53,6 +87,19 @@
                 <img src="img/pr.jpg" alt="Gambar LPK Aikoku Terpadu">
             </div>
         </div>
+<!-- Bagian Kepala Sekolah -->
+    <div class="headmaster-section">
+        <h3 class="headmaster-title">Kata Sambutan Kepala LPK Aikoku Terpadu</h3>
+        <div class="headmaster-content">
+            <div class="headmaster-image">
+                <img src="img/random.jpg" alt="Kepala Sekolah">
+            </div>
+            <div class="headmaster-text">
+                <p>Selamat datang di LPK Aikoku Terpadu. Sebagai Kepala LPK Aikoku Terpadu, saya sangat bangga atas pencapaian kami dalam mencetak tenaga kerja terampil yang siap berkompetisi di dunia internasional. Kami berkomitmen untuk terus memberikan pelatihan yang berkualitas dan relevan dengan kebutuhan industri. Terima kasih telah memilih kami sebagai mitra dalam mencapai impian karir Anda.</p>
+                <p>- Haki, Kepala LPK Aikoku Terpadu</p>
+            </div>
+        </div>
+    </div>
 
         <div class="vision-mission"> <!-- bagian untuk menampilkan visi dan misi lembaga. -->
             <h2>Visi & Misi</h2>

@@ -315,6 +315,7 @@ body {
   }
 }
 
+
 .welcome-section {
   padding: 4rem 8%; /* Mengatur ruang di dalam elemen dengan kelas welcome-section. Padding adalah ruang di dalam batas, antara konten dan tepi elemen itu sendiri.  */
   text-align: center;
@@ -471,104 +472,10 @@ body {
 }
 
 /* Container utama testimonial */
-.testimonial-container {
-  max-width: 800px; /* Lebar maksimum container */
-  margin: 40px auto; /* Margin atas bawah 40px dan auto kiri kanan untuk centering */
-  padding: 20px; /* Padding 20px di semua sisi */
-  text-align: center;
-}
 
-/* Wrapper untuk judul dan garis - menggunakan flexbox untuk layout */
-.title-wrapper {
-  display: flex; /* Menggunakan flexbox */
-  align-items: center; /* Item vertikal di tengah */
-  justify-content: center; /* Item horizontal di tengah */
-  margin-bottom: 30px; /* Jarak ke bawah 30px */
-}
-
-/* Garis dekoratif di samping judul */
-.decorative-line {
-  height: 2px; /* Tinggi garis */
-  width: 50px; /* Panjang garis */
-  background-color: #00b300;
-  margin: 0 15px; /* Margin kiri kanan 15px */
-}
-
-/* Judul testimonial */
-.title {
-  font-size: 24px;
-  color: #333;
-  margin: 0; /* Hapus margin default */
-}
-
-.title-second-line {
-  color: #00b300;
-}
-
-/* Konten testimonial */
-.testimonial-content {
-  background-color: #fff;
-  padding: 25px; /* Padding dalam */
-  border-radius: 8px; /* Sudut melengkung */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-}
-
-/* Teks testimonial */
-.testimonial-text {
-  font-size: 16px;
-  line-height: 1.6; /* Jarak antar baris 1.6 kali ukuran font */
-  color: #666;
-  margin-bottom: 20px; /* Jarak bawah 20 pixel */
-}
-
-/* Container untuk informasi penulis */
-.testimonial-author {
-  display: flex; /* Menggunakan flexbox layout */
-  align-items: center; /* Menengahkan item secara vertikal */
-  justify-content: center; /* Menengahkan item secara horizontal */
-  gap: 15px; 
-}
-
-/* Gambar penulis */
-.author-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-/* Informasi penulis */
-.author-info {
-  text-align: left; 
-}
-
-/* Nama penulis */
-.author-name {
-  font-size: 18px;
-  color: #333;
-  margin: 0; /* Tidak ada margin */
-}
-
-/* Posisi penulis */
-.author-position {
-  font-size: 14px;
-  color: #00b300;
-  margin: 5px 0 0; /* Margin atas 5 pixel */
-}
 
 /* Media untuk layar kecil */
-@media (max-width: 600px) {
-  .title {
-    font-size: 20px; /* Ukuran font lebih kecil */
-  }
 
-  .decorative-line {
-    width: 30px; /* Garis lebih pendek */
-  }
-
-  .testimonial-text {
-    font-size: 14px; /* Teks testimonial lebih kecil */
-  }
-}
 /* end styling index */
 
 /* style footer */
@@ -1502,104 +1409,7 @@ button[type="submit"]:hover {
 /* #00b300 ijo tua  */
 /* #00ff37 ijo muda */
 /* styling untuk galeri */
-.galeri {
-  padding-top: 80px;
-  width: 100%; /* Lebar dari layar */
-  height: 80vh; /* Tinggi 100% dari layar */
-  background: url("img/galery.jpg");
-  background-size: cover; /* Memastikan gambar background menutupi seluruh area */
-  background-position: center; /* Mengatur posisi gambar background di tengah */
-  position: relative;
-}
 
-.galeri-subjudul h1 {
-color: #ffffff ;
-text-align: center;
-}
-.galeri-subjudul h2 {
-  text-align: center;
-  color: #00b300;
-  margin-bottom: 20px;
-}
-
-        .nav-buttons {
-    width: 100%; 
-    background-color: #00b300; 
-    padding: 15px 0; /* Padding atas dan bawah untuk memberi ruang. */
-    display: flex; /* Flexbox untuk tata letak tombol navigasi. */
-    justify-content: center; /* Konten di tengah horizontal. */
-    gap: 20px; 
-    flex-wrap: wrap; /* Tombol akan membungkus ke baris baru jika tidak cukup ruang. */
-}
-
-.nav-button {
-    background: none; /* Tidak ada warna latar tombol default. */
-    border: 2px solid white; /* Garis tepi putih untuk tombol. */
-    color: white;
-    padding: 10px 20px; /* Padding untuk memberi ruang di dalam tombol. */
-    font-size: 1em;
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    text-transform: uppercase; 
-    font-weight: bold; 
-}
-
-.nav-button:hover {
-    background-color: white; 
-    color: #00ff37; 
-}
-
-.nav-button.active {
-    background-color: white; 
-    color: #00b300; 
-}
-
-        .gallery {
-    display: grid; /* Grid layout untuk mengatur item galeri. */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Kolom otomatis dengan minimal 300px. */
-    gap: 20px; 
-    padding: 20px; /* Padding di dalam galeri. */
-    max-width: 1200px; 
-    margin: 0 auto; /* Galeri dipusatkan secara horizontal. */
-}
-
-.gallery-item {
-    position: relative; /* Untuk memungkinkan elemen anak seperti overlay diatur dengan `absolute`. */
-    overflow: hidden; /* Konten di luar batas elemen tidak ditampilkan. */
-    aspect-ratio: 4/3; /* Proporsi lebar dan tinggi elemen (4:3). */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-}
-
-.gallery-item img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; /* Gambar dipotong agar sesuai elemen tanpa distorsi. */
-    transition: transform 0.3s ease; 
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05); /* Gambar diperbesar saat hover. */
-}
-
-       @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5em; /* Mengurangi ukuran font */
-    }
-    
-    .hero h2 {
-        font-size: 1.8em; /* Ukuran subjudul dikurangi. */
-    }
-
-    .nav-buttons {
-        padding: 10px; /* Padding tombol navigasi dikurangi. */
-    }
-
-    .nav-button {
-        padding: 8px 15px; /* Padding dalam tombol dikurangi. */
-        font-size: 0.9em; /* Ukuran font tombol lebih kecil. */
-    }
-}
 /* end styling untuk galeri */
 
 /* start styling login */
