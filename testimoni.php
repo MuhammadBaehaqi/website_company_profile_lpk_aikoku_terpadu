@@ -47,11 +47,15 @@
       justify-content: center;
       gap: 10px;
     }
-    .author-image {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+   .author-image {
+      width: 80px; /* Ukuran gambar */
+      height: 80px;
+      border-radius: 50%; /* Membuat gambar melingkar */
+      object-fit: cover; /* Memastikan gambar proporsional */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow lebih tegas */
+      border: 2px solid #fff; /* Memberikan border putih agar lebih rapi */
     }
+
     .author-name {
       margin: 0;
       font-size: 18px;
@@ -114,29 +118,29 @@
       sensei tachi yg sangat luar biasa, saya mendapat banyak ilmu tentang negara jepang, hinga sekarang saya bisa
       sampai dan menerapkan ilmu tersebut untuk bekerja dan tinggal dijepang"</p>
       <div class="testimonial-author">
-        <img src="img/random.jpg" alt="Anis" class="author-image">
+        <img src="img/Selma.jpg" alt="Selma Fatimah Handaya Resmi" class="author-image">
         <div class="author-info">
-          <h4 class="author-name">Anis</h4>
-          <p class="author-position">Tokutei Ginou Kaigo</p>
+          <h4 class="author-name">Selma Fatimah Handaya Resmi</h4>
+          <p class="author-position">Tokutei Ginou Pengolahan Makanan</p>
         </div>
       </div>
     </div>
     <div class="testimonial">
       <p class="testimonial-text">"Belajar di LPK Aikoku Terpadu sangat membantu saya untuk memahami budaya dan bahasa Jepang ..."</p>
       <div class="testimonial-author">
-        <img src="img/random.jpg" alt="Rina" class="author-image">
+        <img src="img/Selma.jpg" alt="Selma Fatimah Handaya Resmi" class="author-image">
         <div class="author-info">
-          <h4 class="author-name">Anis</h4>
-          <p class="author-position">Tokutei Ginou IT</p>
+          <h4 class="author-name">Selma Fatimah Handaya Resmi</h4>
+          <p class="author-position">Tokutei Ginou</p>
         </div>
       </div>
     </div>
     <div class="testimonial">
       <p class="testimonial-text">"Pelatihannya sangat bagus dan komprehensif, saya merasa sangat siap menghadapi tantangan di Jepang ..."</p>
       <div class="testimonial-author">
-        <img src="img/random.jpg" alt="Budi" class="author-image">
+        <img src="img/Selma.jpg" alt="Afrida" class="author-image">
         <div class="author-info">
-          <h4 class="author-name">Anis</h4>
+          <h4 class="author-name">Selma Fatimah Handaya Resmi</h4>
           <p class="author-position">Engineer</p>
         </div>
       </div>

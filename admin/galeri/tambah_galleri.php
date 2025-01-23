@@ -46,7 +46,7 @@ include '../sidebar.php';
             border-radius: 4px;
             box-sizing: border-box;
         }
-        button {
+        /* button {
             display: block;
             width: 100%;
             padding: 10px;
@@ -59,7 +59,43 @@ include '../sidebar.php';
         }
         button:hover {
             background-color: #218838;
-        }
+        } */
+           .button-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px; /* Jarak antar tombol */
+        margin-top: 20px;
+    }
+
+    .button-group button,
+    .button-group a {
+        flex: 1; /* Membuat tombol memiliki lebar yang sama */
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .button-group button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+    }
+
+    .button-group button:hover {
+        background-color: #218838;
+    }
+
+    .button-group a {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .button-group a:hover {
+        background-color: #0056b3;
+    }
         label {
         font-weight: bold;
         margin-bottom: 8px;
@@ -130,13 +166,15 @@ include '../sidebar.php';
         <label for="keterangan">Keterangan:</label>
         <textarea id="keterangan" name="keterangan" rows="4" cols="50" placeholder="Tambahkan keterangan..." ></textarea>
 <select id="foto" name="kirim_foto">
-        <option value="Album">Album</option>
+        <option value="Tanda Tangan Kontrak">Tanda Tangan Kontrak</option>
         <option value="Keberangkatan">Keberangkatan</option>
-        <option value="Kelulusan">Kelulusan</option>
-        <option value="Fasilitas">Fasilitas</option>
+        <option value="Kelulusan Job">Kelulusan Job</option>
         <option value="Pendidikan">Pendidikan</option>
       </select>
+      <div class="button-group">
         <button type="submit">Upload</button>
+        <a href="galeri_admin.php"class="back-button">Kembali</a>
+        </div>
     </form>
    
 <?php

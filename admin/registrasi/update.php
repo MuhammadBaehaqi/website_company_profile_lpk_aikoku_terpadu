@@ -21,18 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $p = $_POST['statuspernikahan2'];
     $q = $_POST['tinggibadan2'];
     $r = $_POST['beratbadan2'];
-    $s = $_POST['butawarna2'];
-    $t = $_POST['kesehatan2'];
+    $s = $_POST['pengalamanjepang2'];
     $u = $_POST['penyakitkronis2'];
     $v = $_POST['golongandarah2'];
-    $w = $_POST['kewarganegaraan2'];
 
     $updt = $mysqli->query("UPDATE tb_pelajar SET 
         Nama_lengkap='$a', TTL='$b', tanggal_lahir='$c', usia='$d', Jenis_Kelamin='$e', 
         Agama='$f', alamat_ktp='$g', alamat_email='$h', no_telepon='$i', alamat='$j', alamat_keluarga='$k', 
         telepon_keluarga='$l', bidang='$m', pendidikan_terakhir='$n', pengalaman_kerja='$o', 
-        status_pernikahan='$p', tinggi_badan='$q', berat_badan='$r', buta_warna='$s', 
-        kesehatan='$t', penyakit_kronis='$u', golongan_darah='$v', kewarganegaraan='$w' 
+        status_pernikahan='$p', tinggi_badan='$q', berat_badan='$r', pengalaman_jepang='$s', 
+        penyakit_kronis='$u', golongan_darah='$v'
         WHERE id_regis='$id_regis'");
 
     if ($updt === TRUE) {
@@ -163,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="jk2">Jenis Kelamin:</label>
             <input type="text" name="jk2" id="jk2" value='<?php echo $hasil['Jenis_Kelamin']?>'>
         </div>
-
+        
         <div class="form-group">
             <label for="agama2">Agama:</label>
             <input type="text" name="agama2" id="agama2" value='<?php echo $hasil['Agama']?>'>
@@ -230,13 +228,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="form-group">
-            <label for="butawarna2">Buta Warna:</label>
-            <input type="text" name="butawarna2" id="butawarna2" value='<?php echo $hasil['buta_warna']?>'>
-        </div>
-
-        <div class="form-group">
-            <label for="kesehatan2">Kesehatan:</label>
-            <input type="text" name="kesehatan2" id="kesehatan2" value='<?php echo $hasil['kesehatan']?>'>
+            <label for="pengalamanjepang2">Pengalaman Kerja:</label>
+            <input type="text" name="pengalamanjepang2" id="pengalamanjepang2" value='<?php echo $hasil['pengalaman_jepang']?>'>
         </div>
 
         <div class="form-group">
@@ -247,11 +240,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="form-group">
             <label for="golongandarah2">Golongan Darah:</label>
             <input type="text" name="golongandarah2" id="golongandarah2" value='<?php echo $hasil['golongan_darah']?>'>
-        </div>
-
-        <div class="form-group">
-            <label for="kewarganegaraan2">Kewarganegaraan:</label>
-            <input type="text" name="kewarganegaraan2" id="kewarganegaraan2" value='<?php echo $hasil['kewarganegaraan']?>'>
         </div>
 
         <div class="form-footer">

@@ -14,6 +14,17 @@ include '../sidebar.php';
     padding: 20px; /* Memberikan jarak di dalam konten */
     transition: margin-left 0.3s ease; 
 }
+/* Tambahkan ke dalam tag <style> */
+.table-container {
+    max-width: 100%; /* Sesuaikan lebar maksimum */
+    max-height: 400px; /* Sesuaikan tinggi maksimum */
+    overflow-x: auto; /* Scroll horizontal */
+    overflow-y: auto; /* Scroll vertikal */
+    border: 1px solid #ddd; /* Opsional, untuk memberikan batas pada tabel */
+    padding: 10px;
+    margin-top: 20px; /* Jarak dengan elemen lainnya */
+}
+
         h1 {
             color: #333;
         }
@@ -147,6 +158,7 @@ include '../sidebar.php';
             </form>
         </div>
     </div>
+    <div class="table-container">
         <table>
             <thead>
                 <tr>
@@ -193,6 +205,7 @@ include '../sidebar.php';
             ?>
         </tbody>
     </table>
+</div>
 </div>
 <script>
     let debounceTimer;

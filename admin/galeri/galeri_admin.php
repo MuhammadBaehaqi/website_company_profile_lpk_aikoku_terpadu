@@ -19,8 +19,6 @@ include '../sidebar.php';
              justify-content: center; /* Memastikan form berada di tengah */
         }
         
-
-
         .main-content {
     margin-left: 250px; /* Memberikan margin kiri untuk sesuaikan sidebar */
     padding: 20px; /* Memberikan jarak di dalam konten */
@@ -78,6 +76,7 @@ table {
     width: 100%;
     border-collapse: collapse; /* Menghilangkan jarak antar border */
     margin-top: 10px; /* Memberikan jarak atas */
+    
 }
 
 table thead {
@@ -227,6 +226,7 @@ table thead tr:hover {
                         <th>Foto</th>
                         <th>Keterangan</th>
                         <th>Tanggal Upload</th>
+                        <th>Lokasi Foto</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -253,6 +253,7 @@ table thead tr:hover {
                     echo '<td><img src="../../uploads/' . $row['foto_galeri'] . '" style="max-width: 100px; max-height: 100px; object-fit: contain;"></td>';
                     echo '<td>' .$row['keterangan'] . '</td>';
                     echo '<td>' .$row['upload_date'] . '</td>';
+                    echo '<td>' .$row['detail'] . '</td>';
                     echo '<td>
                     <a href="edit_galeri.php?id_galeri=' . $row['id_galeri'] . '" class="btn btn-edit">Edit</a>
                     <a href="hapus_galeri.php?id_galeri=' . $row['id_galeri'] . '" class="btn btn-delete" onclick="return confirm(\'Yakin ingin menghapus?\');">Hapus</a>

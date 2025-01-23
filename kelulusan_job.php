@@ -13,7 +13,7 @@
   padding-top: 80px;
   width: 100%; 
   height: 80vh; 
-  background: url("img/galery.jpg") no-repeat center center / cover; 
+  background: url("img/sejarah.jpg") no-repeat center center / cover; 
   position: relative;
 }
 
@@ -74,6 +74,7 @@
 .gallery-item {
   position: relative;
   overflow: hidden;
+  text-align: center; /* Untuk memastikan teks di tengah */
 }
 
 .gallery-item img {
@@ -88,18 +89,13 @@
 }
 
 .description2 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.7); /* Warna latar belakang */
+  color: white; /* Warna teks */
   padding: 10px;
   font-size: 14px;
   text-align: center;
   border-radius: 5px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  margin-top: 8px; /* Jarak antara gambar dan keterangan */
 }
 
 .gallery-item:hover .description2 {
@@ -146,17 +142,16 @@ html {
     <div id="galeri">
  <?php include('navbar.php'); ?>
                 <div class="galeri-subjudul">
-                    <h1>Galeri</h1>
+                    <h1>Album</h1>
                     <h2>LPK Aikoku Terpadu</h2>
                 </div>
                 </div>
 
                 <div class="nav-buttons">
-                    <a href="galeri.php" class="nav-button active">Keberangkatan</a>
-                    <a href="kelulusan.php" class="nav-button">Kelulusan</a>
-                    <a href="fasilitas.php" class="nav-button">Fasilitas LPK</a>
+                    <a href="Album.php" class="nav-button">Keberangkatan</a>
+                    <a href="kelulusan_job.php" class="nav-button active">Kelulusan Job</a>
                     <a href="pendidikan.php" class="nav-button">Pendidikan LPK</a>
-                    <a href="album.php" class="nav-button">Album LPK</a>
+                    <a href="Tanda_Tangan_Kontrak.php" class="nav-button">Tanda Tangan Kontrak</a>
                 </div>
                 
                 <!-- <div class="gallery">
@@ -193,17 +188,19 @@ require 'config.php';
 // orderby urutan berdasarkan upload date
 $sql = "SELECT foto_galeri, keterangan 
         FROM tb_galeri 
-        WHERE detail = 'Keberangkatan' 
+        WHERE detail = 'Kelulusan Job' 
         ORDER BY upload_date DESC";
 $result = $mysqli->query($sql);
-
 
 if ($result->num_rows > 0) {
     echo '<div class="gallery">';
     while ($row = $result->fetch_assoc()) {
         echo '<div class="gallery-item">';
         echo '<img src="uploads/' . $row['foto_galeri'] . '" alt="Gallery Image">';
-        echo '<p class="description2">' . htmlspecialchars($row['keterangan']) . '</p>'; 
+        // Cek apakah keterangan tidak kosong sebelum menampilkan elemen <p>
+        if (!empty($row['keterangan'])) {
+            echo '<p class="description2">' . htmlspecialchars($row['keterangan']) . '</p>';
+        }
         echo '</div>';
     }
     echo '</div>';
@@ -211,6 +208,7 @@ if ($result->num_rows > 0) {
     echo "No images found in the gallery.";
 }
 ?>
+
             <?php include 'footer.php'; ?>
 </body>
 </html>

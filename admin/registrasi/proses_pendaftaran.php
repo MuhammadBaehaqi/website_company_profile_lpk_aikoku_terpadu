@@ -11,7 +11,6 @@ if (isset($_POST['kirimdata'])) {
     $tanggal_lahir = $_POST['kirim_tanggal_lahir'];
     $usia = $_POST ['kirim_usia'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
-    $hobi = $_POST ['kirim_hobi'];
     $Agama = $_POST['kirim_agama'];
     $alamat_ktp = $_POST['kirim_alamat_ktp'];
     $alamat_email = $_POST ['alamat_email'];
@@ -25,15 +24,13 @@ if (isset($_POST['kirimdata'])) {
     $status_pernikahan = $_POST ['kirim_status_pernikahan'];
     $tinggi_badan = $_POST ['kirim_tinggi_badan'];
     $berat_badan = $_POST ['kirim_berat_badan'];
-    $buta_warna = $_POST ['buta_warna'];
-    $kesehatan = $_POST ['kirim_kesehatan'];
+    $pengalaman_jepang = $_POST ['kirim_pengalaman_jepang'];
     $penyakit_kronis = $_POST ['kirim_penyakit_kronis'];
     $golongan_darah = $_POST ['kirim_golongan_darah'];
-    $kewarganegaraan =$_POST ['kirim_kewarganegaraan'];
     
 // Menyimpan data ke database
-$query = "INSERT INTO tb_pelajar (Nama_lengkap, TTL, tanggal_lahir, usia, Jenis_Kelamin, hobi, Agama, alamat_ktp, alamat_email, no_telepon,  alamat, alamat_keluarga, telepon_keluarga, bidang, pendidikan_terakhir, pengalaman_kerja, status_pernikahan, tinggi_badan, berat_badan, buta_warna, kesehatan, penyakit_kronis, golongan_darah, kewarganegaraan) 
-VALUES ('$Nama', '$TTL', '$tanggal_lahir', '$usia', '$jenis_kelamin', '$hobi', '$Agama', '$alamat_ktp', '$alamat_email', '$no_telepon',  '$alamat', '$alamat_keluarga', '$telepon_keluarga', '$bidang', '$pendidikan_terakhir', '$pengalaman_kerja', '$status_pernikahan', '$tinggi_badan', '$berat_badan', '$buta_warna', '$kesehatan', '$penyakit_kronis', '$golongan_darah', '$kewarganegaraan')";
+$query = "INSERT INTO tb_pelajar (Nama_lengkap, TTL, tanggal_lahir, usia, Jenis_Kelamin, Agama, alamat_ktp, alamat_email, no_telepon,  alamat, alamat_keluarga, telepon_keluarga, bidang, pendidikan_terakhir, pengalaman_kerja, status_pernikahan, tinggi_badan, berat_badan, pengalaman_jepang, penyakit_kronis, golongan_darah) 
+VALUES ('$Nama', '$TTL', '$tanggal_lahir', '$usia', '$jenis_kelamin', '$Agama', '$alamat_ktp', '$alamat_email', '$no_telepon',  '$alamat', '$alamat_keluarga', '$telepon_keluarga', '$bidang', '$pendidikan_terakhir', '$pengalaman_kerja', '$status_pernikahan', '$tinggi_badan', '$berat_badan', '$pengalaman_jepang', '$penyakit_kronis', '$golongan_darah')";
     if (mysqli_query($koneksi, $query)) {
         // Redirect ke halaman home dengan pemberitahuan sukses
  echo "<script>alert('Pendaftaran telah dikirim, mohon tunggu pesan dari admin.'); 

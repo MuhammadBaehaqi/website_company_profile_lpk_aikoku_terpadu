@@ -55,6 +55,10 @@ input:focus, select:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+.form-group.buttons {
+            display: flex;
+            gap: 10px;
+        }
 
 .buttons {
     display: flex;
@@ -62,6 +66,7 @@ input:focus, select:focus {
 }
 
 .btn {
+       flex: 1;
     width: 48%;
     padding: 10px;
     border: none;
@@ -113,6 +118,7 @@ input:focus, select:focus {
             <div class="form-group">
                 <label for="role">Role</label>
                 <select id="role" name="role" required>
+                    <option value="user">Super Admin</option>
                     <option value="admin">Admin</option>
                     <option value="user">User</option>
                 </select>

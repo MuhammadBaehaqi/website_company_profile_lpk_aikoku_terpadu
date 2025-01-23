@@ -12,12 +12,22 @@ include '../sidebar.php';
 
 .main-content {
     padding: 20px;
-    margin-left: 250px;
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
     background-color: #fff;
     color: #333;
     transition: margin-left 0.3s ease;
 }
-
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    overflow-y: auto;
+}
 /* Dashboard Header */
 .dashboard-header {
     margin-bottom: 20px;
@@ -216,12 +226,14 @@ function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     const mainContent = document.querySelector('.main-content');
 
-    if (sidebar.style.width === '250px') {
-        sidebar.style.width = '0';
-        mainContent.style.marginLeft = '0';
-    } else {
-        sidebar.style.width = '250px';
-        mainContent.style.marginLeft = '250px';
+      if (window.innerWidth <= 768) { // Perangkat kecil
+        if (sidebar.style.width === '250px') {
+            sidebar.style.width = '0';
+            mainContent.style.marginLeft = '0';
+        } else {
+            sidebar.style.width = '250px';
+            mainContent.style.marginLeft = '250px';
+        }
     }
 }
 </script>

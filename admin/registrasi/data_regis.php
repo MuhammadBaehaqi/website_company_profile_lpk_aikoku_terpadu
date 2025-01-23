@@ -270,11 +270,9 @@ if ($_SESSION['role'] === 'user') {
                     <th>Status Pernikahan</th>
                     <th>Tinggi Badan</th>
                     <th>Berat Badan</th>
-                    <th>Buta warna</th>
-                    <th>Kesehatan</th>
+                    <th>Pengalaman Jepang</th>
                     <th>Penyakit Kronis</th>
                     <th>Golongan Darah</th>
-                    <th>Kewarganegaraan</th>
                     <th>Update</th>
                     <th>Hapus</th>
                 </tr>
@@ -317,11 +315,9 @@ if ($_SESSION['role'] === 'user') {
                         echo '<td>' . $row['status_pernikahan'] . '</td>';
                         echo '<td>' . $row['tinggi_badan'] . '</td>';
                         echo '<td>' . $row['berat_badan'] . '</td>';
-                        echo '<td>' . $row['buta_warna'] . '</td>';
-                        echo '<td>' . $row['kesehatan'] . '</td>';
+                        echo '<td>' . $row['pengalaman_jepang'] . '</td>';
                         echo '<td>' . $row['penyakit_kronis'] . '</td>';
                         echo '<td>' . $row['golongan_darah'] . '</td>';
-                        echo '<td>' . $row['kewarganegaraan'] . '</td>';
                         echo '<td><a href="update.php?id_regis=' . $row['id_regis'] . '" class="btn btn-update">Update</a></td>';
                         echo '<td><a href="hapus.php?id_regis=' . $row['id_regis'] . '" class="btn btn-delete" onclick="return confirm(\'Yakin ingin menghapus?\');">Hapus</a></td>';
                         echo '</tr>';

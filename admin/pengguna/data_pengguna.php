@@ -20,6 +20,8 @@ include '../sidebar.php';
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    max-height: 400px; /* Atur tinggi maksimum container */
+    overflow-y: auto; /* Scroll vertikal */
 }
 
 /* Controls section (Add button and Search) */
@@ -62,8 +64,9 @@ include '../sidebar.php';
 /* Table Styling */
 table {
     width: 100%;
-    border-collapse: collapse; /* Collapse borders into one */
+    border-collapse: collapse;
     margin-top: 10px;
+    overflow-x: auto; /* Tambahan jika tabel terlalu lebar */
 }
 
 /* Table Header Styling */
@@ -218,13 +221,20 @@ if ($_SESSION['role'] === 'user') {
         <form method="GET">
             <label for="show">Show: </label>
             <select name="show" id="show">
+                <!-- Setiap opsi memiliki atribut value yang berisi nilai yang dikirimkan melalui URL menggunakan metode GET ($_GET).
+                Jika parameter show sudah diatur di URL dan nilainya sama dengan salah satu opsi, maka opsi tersebut akan otomatis terpilih (selected).
+                value="5": Mengirim nilai 5 saat opsi ini dipilih. -->
+                <!-- <?php ?>: Mengecek apakah parameter show ada di URL dan bernilai 5.
+                Jika iya, maka atribut selected ditambahkan, menandakan opsi ini terpilih.
+                Proses yang sama diterapkan pada opsi lain (10, 15, 30, 50, 100). -->
                 <option value="5" <?php echo (isset($_GET['show']) && $_GET['show'] == 5) ? 'selected' : ''; ?>>5</option>
                 <option value="10" <?php echo (isset($_GET['show']) && $_GET['show'] == 10) ? 'selected' : ''; ?>>10</option>
                 <option value="15" <?php echo (isset($_GET['show']) && $_GET['show'] == 15) ? 'selected' : ''; ?>>15</option>
                 <option value="30" <?php echo (isset($_GET['show']) && $_GET['show'] == 30) ? 'selected' : ''; ?>>30</option>
-                    <option value="50" <?php echo (isset($_GET['show']) && $_GET['show'] == 50) ? 'selected' : ''; ?>>50</option>
-                    <option value="100" <?php echo (isset($_GET['show']) && $_GET['show'] == 100) ? 'selected' : ''; ?>>100</option>
+                <option value="50" <?php echo (isset($_GET['show']) && $_GET['show'] == 50) ? 'selected' : ''; ?>>50</option>
+                <option value="100" <?php echo (isset($_GET['show']) && $_GET['show'] == 100) ? 'selected' : ''; ?>>100</option>
             </select>
+            <!-- value="<?php ?>: Jika parameter search ada di URL, maka nilai input diisi dengan nilai tersebut. Jika tidak, input tetap kosong. -->
             <input type="text" name="search" id="search" placeholder="Cari pengguna..." value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
             <button type="submit" style="display: none;">Cari</button>
         </form>

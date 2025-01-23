@@ -55,6 +55,22 @@
             </div>
         </div>
     </div>
+<div class="services">
+    <?php
+    include 'config.php';
+    $result = $mysqli->query("SELECT * FROM program");
+    while ($row = $result->fetch_assoc()):
+    ?>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="<?= $row['icon'] ?>"></i>
+            </div>
+            <h2 class="service-title"><?= $row['title'] ?></h2>
+            <p class="service-description"><?= $row['description'] ?></p>
+            <a href="<?= $row['link'] ?>" class="service-button">INFO LEBIH LANJUT</a>
+        </div>
+    <?php endwhile; ?>
+</div>
 
    <?php include 'footer.php'; ?>
 </body>

@@ -12,15 +12,23 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             margin: 0;
             font-family: Arial, sans-serif;
         }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: white;
+    position: fixed; /* Navbar tetap berada di atas */
+    top: 0; /* Letakkan di atas layar */
+    width: 100%; /* Penuhi lebar layar */
+    z-index: 999; /* Pastikan berada di atas elemen lain */
+}
+        .navbar-logo span {
+    font-size: 24px; /* Increase the font size */
+    font-weight: bold; /* Optional: Make it bold for better emphasis */
+}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #000000;
-            padding: 10px 20px;
-            color: white;
-        }
  .navbar-logo a {
             display: flex;
             align-items: center;
@@ -67,24 +75,60 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         .dropdown {
             position: relative;
         }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #000000;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
+.dropdown a {
+            cursor: pointer;
         }
+        .dropdown-label {
+            position: relative;
+            padding-right: 15px;
+        }
+
+       /* Rotasi panah pada dropdown */
+.dropdown-label::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    transition: transform 0.3s ease-in-out; /* Transisi rotasi */
+}
+
+/* Ketika dropdown aktif, rotasi panah */
+.dropdown.active .dropdown-label::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotasi 180 derajat */
+}
+
+/* Mengatur dropdown-content agar tetap terlihat ketika aktif */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Dropdown aktif */
+.dropdown.active .dropdown-content {
+    display: block;  /* Dropdown tetap terlihat */
+    opacity: 1;
+    transform: translateY(0);
+}
 
         .dropdown-content a {
             display: block;
             padding: 10px 20px;
+            color: white;
+            text-decoration: none;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .navbar-buttons {
@@ -142,6 +186,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             margin: 4px 0;
             width: 25px;
         }
+.dropdown-content.active {
+    display: block !important;
+}
 
         @media screen and (max-width: 768px) {
             .navbar-menu {
@@ -177,7 +224,16 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             .navbar-buttons button {
                 margin: 5px 0; /* Reduce vertical spacing */
             }
+             .dropdown-content {
+                position: static;
+                box-shadow: none;
+            }
+
+            .dropdown-content a {
+                text-align: center;
+            }
         }
+        
     </style>
 </head>
 <body id="top">
@@ -185,7 +241,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <div class="navbar-logo">
             <a href="index.php">
             <img src="img/logo.png" alt="Logo">
-            <span>LPK Aikoku Terpadu</span>
+            <span>LPK AIKOKU TERPADU</span>
             </a>
         </div>
 
@@ -199,7 +255,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <a href="index.php#header" class="<?= $currentPage === 'index.php' ? 'active' : '' ?>">Home</a>
     <a href="profile.php#profile" class="<?= $currentPage === 'profile.php' ? 'active' : '' ?>">Profile</a>
     <div class="dropdown">
-        <a href="#" class="<?= in_array($currentPage, ['program.php', 'magang.php', 'Tg.php', 'engineering.php']) ? 'active' : '' ?>">Jurusan</a>
+        <a class="dropdown-label <?= in_array($currentPage, ['program.php', 'magang.php', 'Tg.php', 'engineering.php']) ? 'active' : '' ?>">Jurusan</a>
         <div class="dropdown-content">
             <a href="program.php" class="<?= $currentPage === 'program.php' ? 'active' : '' ?>">Program</a>
             <a href="magang.php" class="<?= $currentPage === 'magang.php' ? 'active' : '' ?>">Magang</a>
@@ -207,7 +263,15 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             <a href="engineering.php" class="<?= $currentPage === 'engineering.php' ? 'active' : '' ?>">Engineering</a>
         </div>
     </div>
-    <a href="galeri.php#galeri" class="<?= $currentPage === 'galeri.php' ? 'active' : '' ?>">Gallery</a>
+    <a href="Album.php#galeri" class="<?= in_array($currentPage, ['Album.php', 'kelulusan_job.php', 'fasilitas.php', 'pendidikan.php', 'Tanda_Tangan_Kontrak.php']) ? 'active' : '' ?>">Album</a>
+    <div class="dropdown">
+        <a class="dropdown-label <?= in_array($currentPage, ['berita.php', 'kegiatan.php', 'pengumuman.php']) ? 'active' : '' ?>">Informasi</a>
+        <div class="dropdown-content">
+            <a href="berita.php" class="<?= $currentPage === 'berita.php' ? 'active' : '' ?>">Berita</a>
+            <a href="kegiatan.php" class="<?= $currentPage === 'kegiatan.php' ? 'active' : '' ?>">Kegiatan</a>
+            <a href="pengumuman.php" class="<?= $currentPage === 'pengumuman.php' ? 'active' : '' ?>">Pengumuman</a>
+        </div>
+    </div>
     <a href="contact.php#contact" class="<?= $currentPage === 'contact.php' ? 'active' : '' ?>">Contact</a>
     <div class="navbar-buttons">
         <a href="form.php" class="btn-register">Daftar Online</a>
@@ -215,7 +279,29 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     </div>
 </div>
 
+
     </div>
+<script>
+   // Menangani dropdown untuk perangkat sentuh
+document.querySelectorAll('.dropdown > a').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah navigasi langsung
+        const parentDropdown = this.parentElement; // Ambil parent dropdown
+        parentDropdown.classList.toggle('active'); // Toggle kelas 'active' pada parent dropdown
+    });
+});
+
+// Menambahkan event listener untuk menutup dropdown ketika klik di luar dropdown
+document.addEventListener('click', function(event) {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('active'); // Menutup dropdown jika klik di luar
+        }
+    });
+});
+
+</script>
 
      <script>
         function toggleMenu() {

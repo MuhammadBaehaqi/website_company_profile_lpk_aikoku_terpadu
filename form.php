@@ -219,11 +219,6 @@
     	</div>
 
 		<div class="form-group">
-			<label for="hobi">Hobi:</label>
-			<input type="text" id="hobi" name="kirim_hobi">
-		</div>
-
-		<div class="form-group">
 		<label for="agama">Agama:</label>
 		<select id="agama" name="kirim_agama">
 			<option value="">Pilih Agama</option>
@@ -321,17 +316,13 @@
     </div>
 
 		<div class="form-group">
-      <label for="buta_warna">Buta Warna:</label>
-			<select id="buta_warna" name="buta_warna">
-				<option value="">Pilih Opsi</option>
-				<option value="Ya">Ya</option>
-				<option value="Tidak">Tidak</option>
+      <label for="pengalaman_jepang">Pemula atau Ex-Jepang:</label>
+			<select id="pengalaman_jepang" name="kirim_pengalaman_jepang">
+				<option value="">Pilih Status</option>
+				<option value="Pemula">Pemula</option>
+        		<option value="Ex-Jepang">Ex-Jepang</option>
 			</select>
     </div>
-<div class="form-group">
-<label for="kesehatan">Kesehatan:</label>
-			<input type="text" id="kesehatan" name="kirim_kesehatan">
-</div>
     
 <div class="form-group">
   <label for="penyakit_kronis">Penyakit Kronis (jika ada):</label>
@@ -341,10 +332,6 @@
 <div class="form-group">
   <label for="golongan_darah">Golongan Darah:</label>
 			<input type="text" id="golongan_darah" name="kirim_golongan_darah">
-</div>
-<div class="form-group">
-<label for="kewarganegaraan">Kewarganegaraan:</label>
-			<input type="text" id="kewarganegaraan" name="kirim_kewarganegaraan">
 </div>
 
     <button type="submit" name="kirimdata" class="btn btn-primary">Kirim Pendaftaran</button>

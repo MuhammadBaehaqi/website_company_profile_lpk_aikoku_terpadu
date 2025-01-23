@@ -115,14 +115,17 @@
             font-size: 16px;
             padding: 0 5px; /* Tambahkan padding agar label tidak menempel */
         }
-
+.form-group input:focus {
+    border-color: #007bff; /* Warna biru saat fokus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.8); /* Efek glow biru */
+}
         /* Efek label  */
         .form-group input:focus + label,
         .form-group input:not(:placeholder-shown) + label {
             top: -10px; /* Geser lebih ke atas */
             font-size: 12px;
             background:;
-            color: #000;
+            color: #007bff;
             padding: 0 5px;
         }
 

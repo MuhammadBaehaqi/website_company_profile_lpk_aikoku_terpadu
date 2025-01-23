@@ -13,7 +13,7 @@ body {
   padding-top: 80px;
   width: 100%; /* Lebar dari layar */
   height: 100vh; /* Tinggi 100% dari layar */
-  background: url("img/kuil.jpg");
+  background: url("img/jepang.jpg");
   background-size: cover; /* Memastikan gambar background menutupi seluruh area */
   background-position: center; /* Mengatur posisi gambar background di tengah */
   position: relative;
@@ -41,15 +41,7 @@ body {
   position: relative;
 }
 
-#contact {
-  padding-top: 80px;
-  width: 100%; /* Lebar dari layar */
-  height: 100vh; /* Tinggi 100% dari layar */
-  background: url("img/tamu.png");
-  background-size: cover; /* Memastikan gambar background menutupi seluruh area */
-  background-position: center; /* Mengatur posisi gambar background di tengah */
-  position: relative;
-}
+
 
 #Tg {
   padding-top: 80px;
@@ -105,146 +97,6 @@ body {
   color: #ffffff;
 }
 
-.navbar {
-  display: flex; /* untuk mengatur agar tampil dengan tata letak dan diatur secara horizontal. */
-  justify-content: space-between; /* Memberi jarak antara item di navbar */
-  align-items: center; /* Mengatur item vertikal di tengah */
-  padding: 1rem 5%; /* Padding 1rem atas-bawah, 5% kiri-kanan */
-  background-color: black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan halus */
-  position: fixed; /* Mengubah posisi menjadi fixed */
-  top: 0; /* Menempel di bagian atas */
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Memastikan navbar selalu di atas konten lain */
-}
-
-.nav-links {
-  display: flex;
-  align-items: center; /* untuk menyejajarkan semua item */
-  gap: 2rem;
-}
-
-/* Styling untuk setiap link navigasi */
-.nav-links a {
-  /* display: inline-block;
-    background-color: #00B300; */
-  color: #ffffff;
-  text-decoration: none; /* Menghilangkan garis bawah link */
-  font-weight: 500;
-  transition: color 0.5s ease; /* Animasi perubahan warna */
-  position: relative; /*  untuk efek garis bawah */
-  padding: 5px 0; /* Padding atas bawah 5px */
-}
-
-/* Styling untuk tombol Daftar di dalam nav-links */
-.nav-links .daftar {
-  display: inline-block; /* Membuat elemen menjadi block tapi tetap inline dengan elemen lain */
-  background-color: #00b300;
-  color: white; /* Warna teks putih */
-  padding: 12px 24px; /* 12px untuk atas dan bawah. 24px untuk kiri dan kanan*/ /* Memberikan jarak dalam tombol&*/
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-  transition: all 0.3s ease; /* ease: tipe transisi (smooth di awal dan akhir)  */
-}
-
-.nav-links .daftar:hover {
-  background-color: #008000;
-  color: white;
-}
-
-.nav-links .login {
-  display: inline-block; /* Membuat elemen menjadi block tapi tetap inline dengan elemen lain */
-  background-color: #00b300;
-  color: white; /* Warna teks putih */
-  padding: 12px 24px; /* 12px untuk atas dan bawah. 24px untuk kiri dan kanan*/ /* Memberikan jarak dalam tombol&*/
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-  transition: all 0.3s ease; /* ease: tipe transisi (smooth di awal dan akhir)  */
-}
-
-.nav-links .login:hover {
-  background-color: #008000;
-  color: white;
-}
-
-.nav-links a.active {
-  color: #00b300;
-  font-weight: 600;
-}
-
-/* Efek hover pada link navigasi */
-.nav-links a:hover {
-  color: #00ff00;
-  transition: color 0.3s ease;
-}
-
-/* Membuat garis bawah pada link navigasi */
-/*  menargetkan elemen <a> di dalam elemen dengan class .nav-links dan menambahkan element :after. */
-.nav-links a:after {
-  content: ""; /*content dalam pseudo-element seperti :after atau :before wajib diisi agar elemen ini bisa muncul.Nilai '' Membuat elemen akan kosong Namun dapat menambahkan gaya lain seperti digunakan sebagai garis bawah,warna, animasi*/
-  position: absolute; /* element ini akan ditempatkan secara absolut relatif terhadap elemen induk terdekat yang memiliki position: relative; */
-  background-color: #00ff00;
-  transition: width 0.3s ease; /* Membuat animasi perubahan lebar selama 0.3 detik */
-}
-
-.nav-links a:hover:after {
-  width: 100%;
-}
-
-.dropdown {
-    position: relative; /* Mengatur posisi menjadi relatif agar bisa untuk posisi absolut child element */
-    display: inline-block; /* Membuat elemen menjadi inline-block agar lebar menyesuaikan konten dan bisa berada di samping elemen lain */
-}
-
-.dropdown-content {
-    display: none; /* Menyembunyikan konten dropdown secara default */
-    position: absolute; /* Posisi absolut agar bisa diatur relatif ke elemen induknya (.dropdown) */
-    background-color: black;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1001; /* Prioritas tinggi untuk tampil di depan elemen lain */
-    border-radius: 4px;
-    margin-top: 10px; /* Jarak dari elemen induk */
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px; /* Padding untuk memperbesar area klik */
-    text-decoration: none; /* Menghilangkan garis bawah */
-    display: block; /* Mengubah ke blok agar seluruh lebar bisa di-hover */
-    transition: all 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #00b300;
-    color: white;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Membuat segitiga kecil di atas dropdown menggunakan pseudo-element */
-.dropdown-content::before {
-    content: ''; /* Menambahkan konten kosong yang akan menjadi bentuk segitiga */
-    position: absolute;
-    top: -10px; /* Jarak 10px dari atas dropdown */
-    left: 20px;  /* Membuat sisi kiri segitiga transparan */
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid black;
-}
-
-/* Menghilangkan efek after pada link di dalam dropdown */
-.dropdown-content a:after {
-    display: none;
-}
-
 /* Styling untuk header text */
 .header-text {
   text-align: center; /* Teks rata tengah */
@@ -294,7 +146,7 @@ body {
 
 /* Hover effect untuk tombol */
 .button-container .btn:hover {
-  background-color: #008000;
+  background-color:rgb(7, 16, 7);
 }
 
 .menu-icon {
@@ -753,12 +605,6 @@ body {
   font-style: italic;
 }
 
-.image-content img {
-  width: 100%;
-  height: auto; /* Menjaga rasio aspek gambar */
-  border-radius: 8px;
-}
-
 .vision-mission {
   background-color: #f9f9f9;
   padding: 30px; /* Memberikan padding 30px di sekitar konten */
@@ -922,7 +768,7 @@ p {
 
 
 /* styling legalitas */
-.header {
+/* .header {
   text-align: center;
   margin-bottom: 60px;
 }
@@ -931,21 +777,21 @@ p {
   font-size: 2.5em;
   color: #333;
   margin-bottom: 20px;
-}
+} */
 
-.legal-documents {
-  display: flex; /* Menggunakan flexbox untuk tata letak */
-  justify-content: center; /* Memusatkan konten secara horizontal */
+/* .legal-documents {
+  display: flex; Menggunakan flexbox untuk tata letak
+  justify-content: center; Memusatkan konten secara horizontal
   gap: 40px;
-  flex-wrap: wrap; /* Membungkus elemen ke baris baru jika tidak muat */
+  flex-wrap: wrap; Membungkus elemen ke baris baru jika tidak muat
 }
 
 .legal-item {
-  flex: 1; /* Menyebarkan ruang secara merata untuk setiap elemen */
+  flex: 1; Menyebarkan ruang secara merata untuk setiap elemen
   min-width: 300px;
   max-width: 500px;
-  text-align: center; /* Menyelaraskan teks ke tengah */
-  padding: 30px; /* Memberikan padding 30px di sekitar konten */
+  text-align: center; Menyelaraskan teks ke tengah
+  padding: 30px; Memberikan padding 30px di sekitar konten
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -953,16 +799,16 @@ p {
 }
 
 .legal-item:hover {
-  transform: translateY(-5px); /* Efek hover, memindahkan elemen ke atas */
+  transform: translateY(-5px); Efek hover, memindahkan elemen ke atas
 }
 
 .legal-icon {
   width: 80px;
   height: 80px;
-  margin: 0 auto 20px; /* Menempatkan ikon di tengah dan memberikan jarak di bawah */
+  margin: 0 auto 20px; Menempatkan ikon di tengah dan memberikan jarak di bawah
   background: #00937b;
   border-radius: 50%;
-  /* Menggunakan Flexbox untuk menyusun konten di dalam elemen ini. Elemen anak akan disusun secara vertikal dan horizontal di tengah. */
+  Menggunakan Flexbox untuk menyusun konten di dalam elemen ini. Elemen anak akan disusun secara vertikal dan horizontal di tengah.
   display: flex;
   align-items: center;
   justify-content: center;
@@ -976,19 +822,19 @@ p {
 .legal-item h3 {
   font-size: 1.1em;
   color: #333;
-  margin-bottom: 15px; /* Memberikan jarak 15px di bawah judul. */
-  line-height: 1.4; /* Mengatur jarak antar baris pada teks */
+  margin-bottom: 15px; Memberikan jarak 15px di bawah judul.
+  line-height: 1.4; Mengatur jarak antar baris pada teks
 }
 
 .legal-item p {
   color: #00937b;
   font-weight: bold;
-  font-size: 1.1em; /* Menetapkan ukuran font sedikit lebih besar */
-  margin-top: 15px; /* Memberikan jarak 15px di atas elemen paragraf. */
-}
+  font-size: 1.1em; Menetapkan ukuran font sedikit lebih besar
+  margin-top: 15px; Memberikan jarak 15px di atas elemen paragraf.
+} */
 
 /* Tambahkan icon font */
-.icon-book::before {
+/* .icon-book::before {
   content: "📚";
   font-size: 40px;
 }
@@ -997,15 +843,15 @@ p {
   content: "✓";
   font-size: 40px;
   color: white;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container {
-    padding: 20px; /* Pada layar dengan lebar 768px atau lebih kecil (misalnya perangkat mobile), menambahkan padding 20px pada .container. */
+    padding: 20px; Pada layar dengan lebar 768px atau lebih kecil (misalnya perangkat mobile), menambahkan padding 20px pada .container.
   }
 
   .header h1 {
-    font-size: 2em; /* Mengatur ukuran font judul (h1) menjadi 2em di perangkat dengan layar kecil. */
+    font-size: 2em; Mengatur ukuran font judul (h1) menjadi 2em di perangkat dengan layar kecil.
   }
 
   .legal-documents {
@@ -1013,148 +859,12 @@ p {
   }
 
   .legal-item {
-    min-width: 100%; /* Membuat setiap item mengambil 100% lebar kontainer */
+    min-width: 100%; Membuat setiap item mengambil 100% lebar kontainer
   }
-}
+} */
 /* end styling profile */
 
-/* styling contact */
-.container-contact {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.contact-text {
-  text-align: center; /* Teks rata tengah */
-  color: #fff;
-  position: absolute;
-  top: 50%; /* Posisi 50% dari atas */
-  left: 50%; /* Posisi 50% dari kiri */
-  transform: translate(-50%, -50%); /* Menggeser ke tengah */
-  width: 100%;
-}
 
-.contact-text h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #00b300;
-  margin-bottom: 20px; /* Memberikan jarak (ruang kosong) sebesar 20 pixel di bagian bawah elemen */
-}
-
-.contact-text p {
-  font-size: 18px;
-  color: #ffffff;
-  margin: 0 20px; /* Nilai(0) mengatur margin atas dan bawah. Nilai kedua (20px) mengatur margin kanan dan kiri*/
-  line-height: 1.6; /* Mengatur jarak antar baris dalam sebuah teks */
-}
-
-.info-text {
-  font-size: 1.1rem;
-  line-height: 1.6; /* jarak antar baris  */
-  color: #555;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* untuk membagi area menjadi dua kolom pada layar lebar, dan satu kolom saat layar kecil. */
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.contact-form {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-/* input dan textarea Menyediakan padding dan border ringan untuk elemen input.
-textarea: Memberikan kemampuan untuk merubah ukuran vertikal */
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem; /* mengatur jarak antara konten dengan tepi elemen. */
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.form-group textarea {
-  height: 150px;
-  resize: vertical; /*  dapat mengubah ukuran textarea secara vertikal (atas-bawah) saja */
-}
-
-.submit-btn {
-  background-color: #00ff00;
-  color: white;
-  padding: 1rem 2rem; /* Jarak antara konten dan tepi tombol diatur menjadi 1 rem dan 2 rem di kiri-kanan. */
-  border: none; /* Tidak ada garis batas pada tombol. */
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.submit-btn:hover {
-  background-color: #00b300;
-}
-
-.contact-info {
-  background: white;
-  padding: 2rem; /* Jarak antara konten dan tepi elemen akan menjadi 2 rem  */
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info h3 {
-  color: #333;
-  margin-bottom: 1rem; /* Jarak bawah 1 rem */
-}
-
-.contact-info p {
-  margin-bottom: 0.5rem; /* Jarak bawah 0.5 rem */
-  color: #555;
-}
-
-.map-container {
-  height: 400px;
-  margin-top: 2rem; /* Jarak atas 2 rem */
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none; /* Tidak ada garis batas pada iframe. */
-  border-radius: 8px;
-}
-
-/* ukuran layar kurang dari atau sama dengan 768px (perangkat mobile), grid layout berubah menjadi satu kolom untuk elemen */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr; /* Pada ukuran layar ini, grid-template-columns diatur menjadi 1fr, untuk tata letak yang lebih baik pada layar kecil */
-  }
-
-    .container-contact h1 {
-        font-size: 2em;
-    }
-
-    .container-contact p {
-        font-size: 1em;
-    }
-}
-/* end styling contact */
 
 /* styling untuk program */
 .program-text {
